@@ -8,16 +8,17 @@ By subscribing, you'll be able to:
 
 ## Subscription Options
 
-Choose from our two exclusive subscription plans:
 
 ### Distillery: Early User
 - **Price:** $9.99/month
-- [Details](#Early User Subscription)
+- [Details](../early_user/)
 
 ### Distillery: Founders' Pass
 - **Price:** $24.99/month
-- [Details](#)
+- [Details](../founder_pass/)
 
 ## How to Subscribe
 
-To start your subscription, navigate to **Server Subscriptions** on the left-hand sidebar in Discord.
+To start your subscription, navigate to **Server Subscriptions** on the left-hand sidebar in Discord and follow the instructions.
+
+![Local Image](1_discord_subscribe.png)
