@@ -57,6 +57,6 @@ markdown_extensions:
 
 nav:
   - Quick Start: index.md
-  - User Guide:
-      - Models: user-guide/models.md
-      - LoRAS: user-guide/LoRAs.md
+  - Subscriptions: Subscriptions/subscriptions_overview.md
+      - Early User Subscription: Subscriprions/early_user.md
+      - Foudner's Pass: Subscriprions/founder_pass.md

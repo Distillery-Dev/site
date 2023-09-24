@@ -60,6 +60,8 @@ Click on any of them to preview full size. Images in Distillery come upscaled an
 ## What's next?
 There is a lot more that Distillery allows one to do, make sure to read further details to master what's possible here!
 
+You can use /command-infos in Distillery Discord for a quick summary of some of the controls
+
 - [Subscriptions](/subscriptions)
 - [Parameters](/parameters)
 - [Other Workflows](/other_workflows)
