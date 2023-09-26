@@ -11,11 +11,11 @@ By subscribing, you'll be able to:
 
 ### Distillery: Early User
 - **Price:** $9.99/month
-- [Details](../early_user/)
+- [Details](early_user.md)
 
 ### Distillery: Founders' Pass
 - **Price:** $24.99/month
-- [Details](../founder_pass/)
+- [Details](founder_pass.md)
 
 ## How to Subscribe
 

@@ -71,8 +71,8 @@ There is a lot more that Distillery allows one to do, make sure to read further 
 
 You can use /command-infos in Distillery Discord for a quick summary of some of the controls
 
-- [Subscriptions](/Subscriptions/subscriptions_overview/)
-- [Parameters](/Parameters/parameters_overview/)
-- [Other Workflows](/Alternative%20Workflows/commands_overview/)
+- [Subscriptions](Subscriptions/subscriptions_overview.md)
+- [Parameters](Parameters/parameters_overview.md)
+- [Other Workflows](Alternative Workflows/commands_overview.md)
 
 ---

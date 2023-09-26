@@ -10,12 +10,12 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
     - **Usage**: Simply start your command with the desired image description.
     - **Description**: Describes the kind of image you wish to generate. You don't need to prepend `--prompt`; the system assumes your first input as the prompt.
 
-!!! info "Seed (`--seed`): [Learn More](/path/to/your/page/)"
+!!! info "Seed (`--seed`): [Learn More](seed/seed.md)"
     - **Description**: Set a seed for your image. If unspecified, a random seed is selected. Useful for recalling a specific image or comparing parameter impacts. 
     - **Default Value**: `random number`
     - **Example**: `--seed 1991`
 
-!!! info "Negative Prompt (`--neg`)"
+!!! info "Negative Prompt (`--neg`)" [Learn More](negative_prompt/negative_prompt.md)"
     - **Description**: Indicates what you'd like to exclude from the image.
 
 !!! info "Classifier-Free Guidance (`--cfg`)"
