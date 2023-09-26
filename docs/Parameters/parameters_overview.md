@@ -15,12 +15,14 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
     - **Default Value**: `random number`
     - **Example**: `--seed 1991`
 
-!!! info "Negative Prompt (`--neg`)" [Learn More](negative_prompt/negative_prompt.md)"
+!!! info "Negative Prompt (`--neg`) [Learn More](negative_prompt/negative_prompt.md)"
     - **Description**: Indicates what you'd like to exclude from the image.
+    - **Example**: `--neg light bulb`
 
-!!! info "Classifier-Free Guidance (`--cfg`)" [Learn More](cfg/cfg.md)"
+!!! info "(CFG) Classifier-Free Guidance (`--cfg`) [Learn More](cfg/cfg.md)"
     - **Default Value**: 6
     - **Description**: Dictates the model's adherence to your prompt. High values can impact image quality.
+    - **Example**: `--cfg 8`
 
 !!! info "Aspect Ratio (`--ar`)"
     - **Usage**: Specify as `x:y` (e.g., `1:1`, `9:16`).
