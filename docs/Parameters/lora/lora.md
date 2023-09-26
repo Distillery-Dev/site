@@ -1,11 +1,11 @@
 # LoRA (Low Rank Adaptation)
 
-LoRA, or **Low Rank Adaptation**, is an optional model that can be appended to the generation. Each LoRA adds a small neural network to the original model, aiming to influence it towards its specific generative goal. By adding `--lora` followed by the name of the LoRA model to be used, you can add it to the generation. By default, no LoRAs are used unless specifically asked for by the user.
+LoRA, or **Low Rank Adaptation**, is an optional model that can be appended to the generation. By adding `--lora` followed by the name of the LoRA model to be used, you can add it to the generation. By default, no LoRAs are used unless specifically asked for by the user.
 
 Up to 5 LoRAs can be used at any single time, but their individual influence is reduced by every additional LoRA model. This is automatically done by Distillery's backend in order to preserve the quality of the generative output, since too many LoRAs may generate additional noise in the final product.
 
-!!! tip "Recommended Range"
-    Typically, a CFG value between 3 and 12 yields the most consistent results.
+!!! tip "How LoRAs work"
+    Each LoRA adds a small neural network to the original model, aiming to influence it towards its specific generative goal. A LoRA is controlled by two main parameters: its **weight**, which determines how strongly its influence must be on the original model's output, and its **activation keywords**, which are the words that must be used in order to let the LoRA know it must work. Distillery is handling the weight of the LoRA automatically, so the only thing the user must focus on is the generation prompt.
 
 While a higher CFG value implies stricter adherence to the prompt, it doesn't guarantee improved image quality. In fact, after a certain threshold, the image quality can degrade. Therefore, it's not simply a matter of always using a higher value.
 
@@ -39,28 +39,8 @@ Notice the significant changes in the generated images. While the default might 
 
 
 
+| LoRA name  | Creator  | Description  | Activation words  | Available In                        |
+|------------|----------|--------------|-------------------|-------------------------------------|
+| Data 1     | Data 2   | Data 3       | Data 4            | [Data 5](https://example.com/link1) |
+| Data 6     | Data 7   | Data 8       | Data 9            | [Data 10](https://example.com/link2)|
 
-
-
-<table border="1">
-  <thead>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Data 1</td>
-      <td>Data 2</td>
-      <td>Data 3</td>
-    </tr>
-    <tr>
-      <td>Data 4</td>
-      <td>Data 5</td>
-      <td>Data 6</td>
-    </tr>
-    <!-- Add more rows as needed -->
-  </tbody>
-</table>
