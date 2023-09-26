@@ -1,13 +1,19 @@
 # LoRA (Low Rank Adaptation)
 
-LoRA, or **Low Rank Adaptation**, is an optional model that can be appended to the generation. By adding `--lora` followed by the name of the LoRA model to be used, you can add it to the generation. By default, no LoRAs are used unless specifically asked for by the user.
+LoRA, or **Low Rank Adaptation**, is an optional model that can be appended to the generation. Each LoRA adds a small neural network to the original model, aiming to influence it towards its specific generative goal. By adding `--lora` followed by the name of the LoRA model to be used, you can add it to the generation. 
+
+By default, no LoRAs are used unless specifically asked for by the user.
 
 Up to 5 LoRAs can be used at any single time, but their individual influence is reduced by every additional LoRA model. This is automatically done by Distillery's backend in order to preserve the quality of the generative output, since too many LoRAs may generate additional noise in the final product.
 
-!!! tip "How LoRAs work"
-    Each LoRA adds a small neural network to the original model, aiming to influence it towards its specific generative goal. A LoRA is controlled by two main parameters: its **weight**, which determines how strongly its influence must be on the original model's output, and its **activation keywords**, which are the words that must be used in order to let the LoRA know it must work. Distillery is handling the weight of the LoRA automatically, so the only thing the user must focus on is the generation prompt.
+!!! tip "How LoRAs actually work"
+    A LoRA is controlled by two main parameters: its **weight**, which determines how strongly its influence must be on the original model's output, and its **activation keywords**, which are the words that must be used in order to let the LoRA know it must work. Distillery is handling the weight of the LoRA automatically, so the only thing the user must focus on is the generation prompt.
 
-While a higher CFG value implies stricter adherence to the prompt, it doesn't guarantee improved image quality. In fact, after a certain threshold, the image quality can degrade. Therefore, it's not simply a matter of always using a higher value.
+LoRAs are unique in that they are small models than can be ported from one model checkpoint to another of the same family (that is: SD1.5-based LoRAs work across most SD1.5 model checkpoints, and the same goes for SDXL). Think of them as "cartridges" to the model checkpoints "consoles". 
+
+While the best LoRAs will always be the ones trained over the model that is invoked for the generation, there are 
+
+
 
 Moreover, the best CFG value often depends on the unique combination of prompts, models, and other parameters you're using. It's crucial to experiment to find the sweet spot for your specific generation.
 
