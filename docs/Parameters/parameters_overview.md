@@ -18,7 +18,7 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
 !!! info "Negative Prompt (`--neg`)" [Learn More](negative_prompt/negative_prompt.md)"
     - **Description**: Indicates what you'd like to exclude from the image.
 
-!!! info "Classifier-Free Guidance (`--cfg`)"
+!!! info "Classifier-Free Guidance (`--cfg`)" [Learn More](cfg/cfg.md)"
     - **Default Value**: 6
     - **Description**: Dictates the model's adherence to your prompt. High values can impact image quality.
 
