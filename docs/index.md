@@ -38,11 +38,20 @@ Distillery Bartender bot will serve amazing images from your text prompt and giv
 ### 3. Start Generating Daily Free Images!
 You can head straight to #free-generations channel to get started with daily free images.
 
-* type /serve-free or select the command from the list
+* type `/serve-free` or select the command from the list
 * next, enter the text description of the image you want to generate
 * finally, press enter
 
 ![Local Image](2_serve_free.png)
+
+```plaintext
+/serve-free prompt: old bartender in the bar with a long beard
+```
+
+!!! note "Tip for Quality Outputs"
+    High-quality prompts make a massive difference when it comes to generating high-quality images. Check out some examples from the `#get-inspired` channel on Distillery Discord or head to <a href="https://civitai.com/images" target="_blank">https://civitai.com/images</a> to see prompts used by the Stable Diffusion enthusiast community to generate a wide range of images.
+
+
 
 ### 4. Image Generation Process
 After sending the command, Bartender will display a message that your request was receieved.
@@ -62,8 +71,8 @@ There is a lot more that Distillery allows one to do, make sure to read further 
 
 You can use /command-infos in Distillery Discord for a quick summary of some of the controls
 
-- [Subscriptions](/subscriptions)
-- [Parameters](/parameters)
-- [Other Workflows](/other_workflows)
+- [Subscriptions](/Subscriptions/subscriptions_overview/)
+- [Parameters](/Parameters/parameters_overview/)
+- [Other Workflows](/Alternative%20Workflows/commands_overview/)
 
 ---

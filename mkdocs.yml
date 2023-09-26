@@ -64,5 +64,6 @@ nav:
       - Founder's Pass: Subscriptions/founder_pass.md
   - Parameters:
       - Parameters Overview: Parameters/parameters_overview.md
+      - Seed: Parameters/seed.md
   - Alternative Workflows:
       - Commands Overview: Alternative Workflows/commands_overview.md
