@@ -66,5 +66,6 @@ nav:
       - Parameters Overview: Parameters/parameters_overview.md
       - Seed: Parameters/seed/seed.md
       - Negative Prompt: Parameters/negative_prompt/negative_prompt.md
+      - CFG: Parameters/cfg/cfg.md
   - Alternative Workflows:
       - Commands Overview: Alternative Workflows/commands_overview.md
