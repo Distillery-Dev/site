@@ -80,7 +80,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | ```watercolor``` | [Cinsdia](https://twitter.com/cinsdia?t=oJuy8Qw1BQ5uCXODAlQo5Q&s=09) | Watercolor style | ```None``` | [Link](https://civitai.com/models/104707/niji-watercolor) |
 | ```westerncartoon``` | [quack_quack_22](https://twitter.com/quack_quack_22) | General-purpose western cartoon style | ```cartoon fanart style``` | [Link](https://civitai.com/models/17800/cartoon-fanart-style) |
 | ```witchcraftpunk``` | [konyconi](https://civitai.com/user/konyconi/models) | WitchcraftPunk style | ```WitchcraftPunkAI``` | [Link](https://civitai.com/models/78280/witchcraftpunkai) |
-| ```zombie``` | [konyconi](https://civitai.com/user/konyconi/models) | Makes any character a zombie! | ```rotungwoka person``` | [Link](https://civitai.com/models/20630/rottingzombies-lora-extraction) |
+| ```zombie``` | [konyconi](https://civitai.com/user/konyconi/models) | Makes any character a zombie | ```rotungwoka person``` | [Link](https://civitai.com/models/20630/rottingzombies-lora-extraction) |
 
 ## Loras for SDXL models
 
