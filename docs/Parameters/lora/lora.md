@@ -21,7 +21,11 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | LoRA name  | Creator  | Description  | Activation words  | Available In                        |
 |------------|----------|--------------|-------------------|-------------------------------------|
 | ```realism``` | Distillery | Photorealistic and prompt-compliant generations | None | [Link](https://civitai.com/models/90467?modelVersionId=105772) |
-| ```analog``` | [alenknight](https://civitai.com/user/alenknight)   | Analog photography | ```analog style``` | [Link](https://example.com/link2)|
+| ```analog``` | [alenknight](https://civitai.com/user/alenknight) | Analog photography | ```analog style``` | [Link](https://example.com/link2)|
+| ```realism``` | [Distillery](www.distillery.dev) | Photorealistic and prompt-compliant generations | ```None``` | [Link](https://civitai.com/models/90467?modelVersionId=105772) |
+| ```pencil``` | [L0datmos](https://civitai.com/user/L0datmos/models) | Pencil drawing style | ```None``` | [Link](https://civitai.com/models/110244/drawing) |
+![image](https://github.com/irakli-ff/distillery-docs/assets/18445184/0f034c78-bff5-46b6-8df9-e60e7cdaaaea)
+
 
 
 
