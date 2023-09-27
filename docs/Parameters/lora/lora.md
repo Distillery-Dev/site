@@ -9,13 +9,21 @@ Up to 5 LoRAs can be used at any single time, but their individual influence is 
 !!! tip "How LoRAs actually work"
     A LoRA is controlled by two main parameters: its **weight**, which determines how strongly its influence must be on the original model's output, and its **activation keywords**, which are the words that must be used in order to let the LoRA know it must work. Distillery is handling the weight of the LoRA automatically, so the only thing the user must focus on is the generation prompt.
 
-LoRAs are unique in that they are small models than can be ported from one model checkpoint to another of the same family (that is: SD1.5-based LoRAs work across most SD1.5 model checkpoints, and the same goes for SDXL). Think of them as "cartridges" to the model checkpoints "consoles". 
+While the best LoRAs will always be the ones trained over the model that is invoked for the generation, most LoRAs can be ported from one model checkpoint to another of the same family (that is: SD1.5-based LoRAs work across most SD1.5 model checkpoints, and the same goes for SDXL). 
 
-While the best LoRAs will always be the ones trained over the model that is invoked for the generation, there are 
+LoRAs are unique tools at our disposal in the generative art toolkit. Think of them as "cartridges" to the model checkpoints' "consoles".
+
+## Loras for SD 1.5 models
+
+The following LoRAs are available for our standard models (bloodymary, vodka and screwdriver):
 
 
+| LoRA name  | Creator  | Description  | Activation words  | Available In                        |
+|------------|----------|--------------|-------------------|-------------------------------------|
+| Data 1     | Data 2   | Data 3       | Data 4            | [Data 5](https://example.com/link1) |
+| Data 6     | Data 7   | Data 8       | Data 9            | [Data 10](https://example.com/link2)|
 
-Moreover, the best CFG value often depends on the unique combination of prompts, models, and other parameters you're using. It's crucial to experiment to find the sweet spot for your specific generation.
+
 
 ## Practical Exploration
 
@@ -43,10 +51,4 @@ Now, let's drastically increase the CFG value to --cfg 10:
 
 Notice the significant changes in the generated images. While the default might seem optimal for this simple example, remember that as you introduce more parameters and models, experimenting with CFG values can prove beneficial.
 
-
-
-| LoRA name  | Creator  | Description  | Activation words  | Available In                        |
-|------------|----------|--------------|-------------------|-------------------------------------|
-| Data 1     | Data 2   | Data 3       | Data 4            | [Data 5](https://example.com/link1) |
-| Data 6     | Data 7   | Data 8       | Data 9            | [Data 10](https://example.com/link2)|
 
