@@ -54,7 +54,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | ```modernlogo``` | [leroidoesaiart](https://civitai.com/user/leroidoesaiart/models) | Modern corporate logos | ```modernlogo``` | [Link](https://civitai.com/models/22399/modern-logo) |
 | ```neonlight``` | [Eisthol](https://civitai.com/user/Eisthol/models) | Drawings with neon lights | ```neon lights``` | [Link](https://civitai.com/models/50408/neon-light) |
 | ```nightmare``` | [konyconi](https://civitai.com/user/konyconi/models) | Horror lora by konyconi | ```NightmarishAI``` | [Link](https://civitai.com/models/56336/nightmarishai) |
-| ```nintendo64``` | [name64](https://civitai.com/user/name64/models) | Low Poy, Nintendo 64 style | ```n64style, psxstyle, dsstyle``` | [Link](https://civitai.com/models/85322/icbin64-i-cant-believe-its-not-64) |
+| ```nintendo64``` | [name64](https://civitai.com/user/name64/models) | Low Poly, Nintendo 64 style | ```n64style, psxstyle, dsstyle``` | [Link](https://civitai.com/models/85322/icbin64-i-cant-believe-its-not-64) |
 | ```noir``` | [YeiyeiArt](https://tensor.art/u/612567052280105600) | Noir style | ```NoirStyle``` | [Link](https://civitai.com/models/125916/film-noir-style-retro-photo-by-yeiyeiart) |
 | ```pastelcolor``` | [nnna](https://civitai.com/user/nnna/models) | Light colors and pen style | ```None``` | [Link](https://civitai.com/models/130868/pastel-color) |
 | ```pencil``` | [L0datmos](https://civitai.com/user/L0datmos/models) | Pencil drawing style | ```None``` | [Link](https://civitai.com/models/110244/drawing) |
