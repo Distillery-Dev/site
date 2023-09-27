@@ -20,8 +20,8 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 
 | LoRA name  | Creator  | Description  | Activation words  | Available In                        |
 |------------|----------|--------------|-------------------|-------------------------------------|
-| Data 1     | Data 2   | Data 3       | Data 4            | [Data 5](https://example.com/link1) |
-| Data 6     | Data 7   | Data 8       | Data 9            | [Data 10](https://example.com/link2)|
+| realism     | Distillery   | Photorealistic and prompt-compliant generations | None | [Link]([https://example.com/link1](https://civitai.com/models/90467?modelVersionId=105772) |
+| Data 6     | Distillery   | Data 8       | Data 9            | [Data 10](https://example.com/link2)|
 
 
 
