@@ -63,6 +63,7 @@ nav:
       - Seed: Parameters/seed/seed.md
       - Negative Prompt: Parameters/negative_prompt/negative_prompt.md
       - CFG: Parameters/cfg/cfg.md
+      - LoRAs: Parameters/lora/lora.md
   - Alternative Workflows:
       - Commands Overview: Alternative Workflows/commands_overview.md
   - Subscriptions: 

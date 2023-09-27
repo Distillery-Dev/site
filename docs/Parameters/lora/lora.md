@@ -21,7 +21,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | LoRA name  | Creator  | Description  | Activation words  | Available In                        |
 |------------|----------|--------------|-------------------|-------------------------------------|
 | ```analog``` | [alenknight](https://civitai.com/user/alenknight) | Analog photography | ```analog style``` | [Link](https://civitai.com/models/52648/analog-diffusion-lora) |
-| ```anime``` | [Distillery](distillery.dev) | Anime LoRA (balanced) | ```kiri_fox``` | TBD |
+| ```anime``` | [Distillery](https://followfox.ai/) | Anime LoRA (balanced) | ```kiri_fox``` | TBD |
 | ```avatarnavi``` | [SeventKnight](https://civitai.com/user/SeventKnight/models) | Transforms characters into Na’vi Avatar aliens | ```na'vi, avatar, blue skin, aoa``` | [Link](https://civitai.com/models/21787/alloutnavi) |
 | ```baroque``` | [konyconi](https://civitai.com/user/konyconi/models) | Baroque aesthetics style | ```baroqueAI``` | [Link](https://civitai.com/models/38414/baroqueai) |
 | ```battleworn``` | [Endless8](https://civitai.com/user/Endless8/models) | Creates characters is a battle worn state | ```None``` | [Link](https://civitai.com/models/24015/battleworn-concept) |
