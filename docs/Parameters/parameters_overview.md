@@ -45,6 +45,6 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
     - **Options**: 'sdxl', 'vodka', 'screwdriver'
     - **Description**: Chooses the model for image generation.
 
-!!! info "Low-Rank Adaptation (`--lora`)"
-    - **Description**: Appends an optional model for enhanced generation. For 'bloodymary', 'vodka', or 'screwdriver', over 10 LORAs are available. SDXL currently supports 'nurlens'. More LORA info is available via `/command-infos`.
+!!! info "Low-Rank Adaptation (`--lora`)" [Learn More](lora/lora.md)"
+    - **Description**: Appends an optional model for enhanced generation. For 'bloodymary', 'vodka', or 'screwdriver', there are dozens of LORAs available. SDXL currently supports 'nurlens'. See all othe LoRAs available via `/command-infos` and [here](lora/lora.md).
 
