@@ -24,7 +24,7 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
     - **Description**: Dictates the model's adherence to your prompt. High values can impact image quality.
     - **Example**: `--cfg 8`
 
-!!! info "Aspect Ratio (`--ar`)"
+!!! info "Aspect Ratio (`--ar`) [Learn More](aspect_ratio/aspect_ratio.md)"
     - **Usage**: Specify as `x:y` (e.g., `1:1`, `9:16`).
     - **Description**: Changes the generation's aspect ratio. Available options vary depending on the model (SDXL or SD1.5).
 
