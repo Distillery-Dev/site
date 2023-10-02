@@ -28,7 +28,7 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
     - **Usage**: Specify as `x:y` (e.g., `1:1`, `9:16`).
     - **Description**: Changes the generation's aspect ratio. Available options vary depending on the model (SDXL or SD1.5).
 
-!!! info "Denoise Strength (`--power`)"
+!!! info "Denoise Strength (`--power`)" [Learn More](denoise/denoise.md)"
     - **Default Value**: 0.3
     - **Description**: Adjusts denoise strength during upscaling. High values can introduce artifacts in images.
 

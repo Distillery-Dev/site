@@ -65,6 +65,7 @@ nav:
       - CFG: Parameters/cfg/cfg.md
       - LoRAs: Parameters/lora/lora.md
       - Aspect Ratio: Parameters/aspect_ratio/aspect_ratio.md
+      - Denoise Strength: Parameters/denoise/denoise.md
   - Alternative Workflows:
       - Commands Overview: Alternative Workflows/commands_overview.md
   - Subscriptions: 
