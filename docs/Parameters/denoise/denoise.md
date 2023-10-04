@@ -7,7 +7,7 @@ Denoise Strength, indicated by the `--power` parameter, is an essential tool for
 - **Default Value**: `0.3`
 - **Description**: The `--power` parameter adjusts the strength of the upscaling algorithm. A higher value means the upscaling is more aggressive, resulting in a more pronounced denoising effect. Conversely, a lower value yields a more subtle, nuanced effect. Using this lever, you can influence the clarity and fidelity of generated images, especially during the upscaling process.
 
-## Deep Dive
+## Usage
 
 All generated images undergo upscaling. This process can sometimes introduce noise or other undesired effects. By providing the `--power` option, we grant users the ability to adjust the denoise strength and, consequently, the image's final appearance. 
 
