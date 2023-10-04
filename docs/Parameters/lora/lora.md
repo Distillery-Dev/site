@@ -62,8 +62,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | ```gothicpunk``` | [konyconi](https://civitai.com/user/konyconi/models) | GothicPunk style | ```GothicPunkAI``` | [Link](https://civitai.com/models/78695/gothicpunkai) |
 | ```gta``` | [vizsumit](https://civitai.com/user/vizsumit/models) | GTA style drawings | ```comic character``` | [Link](https://civitai.com/models/66719?modelVersionId=161686) |
 | ```isometric``` | [CitronLegacy](https://civitai.com/user/CitronLegacy/models) | Isometric views | ```Isometric_Setting``` | [Link](https://civitai.com/models/118775/stylized-setting-isometric) |
-"| ```isometricdnd``` | [Tomas_Aguilar](https://civitai.com/user/Tomas_Aguilar) | Isometric interiors for D&D/RPG | ```isometricclas2nive, 
-isometricnive``` | [Link](https://civitai.com/models/80719/table-rpg-dandd-maps-isometric-room) |"
+| ```isometricdnd``` | [Tomas_Aguilar](https://civitai.com/user/Tomas_Aguilar) | Isometric interiors for D&D/RPG | ```isometricclas2nive, isometricnive``` | [Link](https://civitai.com/models/80719/table-rpg-dandd-maps-isometric-room) |
 | ```kiri``` | [Distillery](distillery.dev) | Anime LoRA (strong) | ```kiri_fox``` | TBD |
 | ```kurzgesagt``` | [chilon249](https://civitai.com/user/chilon249/models) | Kurzgesagt drawing style | ```kurzgesagt, vector art``` | [Link](https://civitai.com/models/10098?modelVersionId=12006) |
 | ```lego``` | [LordJia](https://huggingface.co/lordjia) | Makes anything Lego | ```LEGO Creator, LEGO MiniFig, LEGO BrickHeadz``` | [Link](https://civitai.com/models/92444?modelVersionId=150123) |
