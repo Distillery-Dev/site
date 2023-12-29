@@ -1,4 +1,4 @@
-## Welcome to Distillery!
+## Welcome to Distillery!!!
 ## Generate amazing images using the cutting edge open-source technologies.
 
 Distillery Bartender bot will serve amazing images from your text prompt and give you a bunch of levers to make them exactly how you want them to look. Directly in Discord without complex installations and specific devices.
