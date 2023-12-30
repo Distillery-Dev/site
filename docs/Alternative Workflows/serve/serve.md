@@ -2,7 +2,7 @@
 
 ## Available Additional Parameters:
 
-| Parameter             | Link to Docs                                  | Simple Overview                    |
+| Parameter             | Link to Docs (WIP, to be added)                                  | Simple Overview                    |
 |-----------------------|-----------------------------------------------|------------------------------------|
 | `--neg`               | [Negative Prompts](Parameters/negative_prompt/negative_prompt.md)  | Add Negative Prompt `--neg night`                   |
 | `--seed`              | [Seed](Parameters/seed/seed.md)               | Control Image Generation Seed `--seed 123`                   |
