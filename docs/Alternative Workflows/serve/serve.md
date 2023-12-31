@@ -28,5 +28,6 @@
 | `--inpaintcontrol`    | [Inpainting](../../Parameters/inpaint/inpaint.md) | Adjust strength of controlnet used for inpainting `--inpaintcontrol 0`               |
 | `--imagedenoise`      | [Image2image](../../Parameters/img2img/img2img.md)    | Adjust the portion of initial image to keep for image2image `--imagedenoise 0.8`               |
 | `--upscalemethod`     | [Upscale](../../Parameters/upscale_method/upscale_method.md) | Choose the method to upscale or disable it. `--upscalemethod none`               |
-| `--refinerpass`       | !!!Need to write about this somewhere~~~ | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5`                   |
+| `--refinerpass`       | Refinerpass | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5`                   |
+| `--cutoffweight`       | Cutoffweight | Adjust Cutoff weight `--cutoffweight 1.5`                   |
 
