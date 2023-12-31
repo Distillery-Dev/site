@@ -25,7 +25,7 @@
 | `--raw`               | [RAW](../../Parameters/raw/raw.md)                 | Disable some of the added processing for more control `--raw`                   |
 | `--force-model`       | [Models](../../Parameters/model/model.md)  | what's this?                   |
 | `--controlweight`     | [Controlnet](../../Parameters/control/control.md) | Adjust strength of controlnets `--controlweight 0.3`               |
-| `--inpaintcontrol`    | [Inpainting](../../Parameters/inpaint/inpaint.md) | Adjust strength of controlnet used for inpainting `--inpaintcontrol 0`               |
+| `--inpaintcontrol`    | [Inpainting](../../Parameters/inpaint/inpaint.md) | SD15 only, adjust strength of controlnet used for inpainting `--inpaintcontrol 0`               |
 | `--imagedenoise`      | [Image2image](../../Parameters/img2img/img2img.md)    | Adjust the portion of initial image to keep for image2image `--imagedenoise 0.8`               |
 | `--upscalemethod`     | [Upscale](../../Parameters/upscale_method/upscale_method.md) | Choose the method to upscale or disable it. `--upscalemethod none`               |
 | `--refinerpass`       | Refinerpass | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5`                   |
