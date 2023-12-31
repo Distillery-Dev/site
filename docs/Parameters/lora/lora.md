@@ -124,6 +124,8 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 
 We currently only have one LoRA for SDXL: ```lora nurlens```, a realism LoRA.
 
+| LoRA name  | Creator  | Description  | Activation words  | Available In                        |
+|------------|----------|--------------|-------------------|-------------------------------------|
 | `split` | [WTFusion](https://civitai.com/user/WTFusion) | Splits head/body and shows something inside it | `split head, split head and body, inside` | [Link](https://civitai.com/models/206883?modelVersionId=234056) |
 | `princess` | [titansteng](https://civitai.com/user/titansteng) | Create Disney princesses in Pixar style | `split head, split head and body, inside` | [Link](https://civitai.com/models/212532/all-disney-princess-xl-lora-model-from-ralph-breaks-the-internet?modelVersionId=244808) |
 | `animesketch-sdxl` | [CitronLegacy](https://civitai.com/user/CitronLegacy) | Creates simple sketch style images (for SDXL) | `(Pencil_Sketch:1.2, messy lines, greyscale, traditional media, sketch), unfinished, hatching (texture)` | [Link](https://civitai.com/models/202764/anime-sketch-style-sdxl-and-sd15?modelVersionId=258108) |
@@ -134,4 +136,7 @@ We currently only have one LoRA for SDXL: ```lora nurlens```, a realism LoRA.
 | `logo` | [artificialguybr](https://civitai.com/user/artificialguybr) | Generate logos in a wide variety of themes | `logoredmaf, logo` | [Link](https://civitai.com/models/124609/logoredmond-logo-lora-for-sd-xl-10?modelVersionId=177492) |
 | `moreart` | [ledadu](https://civitai.com/user/ledadu) | Detailed, creative, expressive images | `None` | [Link](https://civitai.com/models/124347/xlmoreart-full-xlreal-enhancer?modelVersionId=152309) |
 | `wowifier` | [mooncryptowow](https://civitai.com/user/mooncryptowow) | Trained on a variety of AI art made by mooncryptowow | `art by mooncryptowow` | [Link](https://civitai.com/models/117041/wowifierxl?modelVersionId=217866) |
-| `voxel` | [fictiverse](https://civitai.com/user/fictiverse) | Generates voxel style art
+| `voxel` | [fictiverse](https://civitai.com/user/fictiverse) | Generates voxel style art | `voxel style` | [Link](https://civitai.com/models/118536/voxel-xl?modelVersionId=128609) |
+| `dnd` | [Hevok](https://civitai.com/user/Hevok) | Dungeons and Dragons fantasy art style | `dungeons and dragons` | [Link](https://civitai.com/models/134343/dungeons-and-dragons-art-style-capture-fantasy-lora-xl?modelVersionId=209171) |
+| `surrealharmony-sdxl` | [Kappa_Neuro](https://civitai.com/user/Kappa_Neuro) | Creates juxtapositions of surrealistic elements in a harmonious way (SDXL version) | `Surreal Harmony` | [Link](https://civitai.com/models/36722/surreal-harmony?modelVersionId=154228) |
+
