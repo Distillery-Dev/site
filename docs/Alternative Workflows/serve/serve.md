@@ -23,7 +23,7 @@
 | `--sharpen`           | [Sharpen](../../Parameters/sharpen/sharpen.md)         | Adjust sharpening value `--sharpen 0`                   |
 | `--sampler`           | [Sampler](../../Parameters/sampler/sampler.md)         | Change sampling method `--sampler lcm`                   |
 | `--raw`               | [RAW](../../Parameters/raw/raw.md)                 | Disable some of the added processing for more control `--raw`                   |
-| `--force-model`       | [Models](../../Parameters/model/model.md)  | what's this?                   |
+| `--force-model`       | [Models](../../Parameters/model/model.md)  | Forces inpaint to work with the selected model (vs using inpainting-finetuned ones)    |
 | `--controlweight`     | [Controlnet](../../Parameters/control/control.md) | Adjust strength of controlnets `--controlweight 0.3`               |
 | `--inpaintcontrol`    | [Inpainting](../../Parameters/inpaint/inpaint.md) | SD15 only, adjust strength of controlnet used for inpainting `--inpaintcontrol 0`               |
 | `--imagedenoise`      | [Image2image](../../Parameters/img2img/img2img.md)    | Adjust the portion of initial image to keep for image2image `--imagedenoise 0.8`               |
