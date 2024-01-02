@@ -33,8 +33,8 @@ This is a list of parameters available for `/serve` and `/serve-free` commands:
     - **Description**: Adjusts denoise strength during upscaling. High values can introduce artifacts in images.
 
 !!! info "Model (`--model`)"
-    - **Default Value**: 'bloodymary'
-    - **Options**: 'sdxl', 'vodka', 'screwdriver', 'mohawk'
+    - **Default Value**: 'cosmopolitan'
+    - **Options**: 'sdxl', 'vodka', 'screwdriver', 'mohawk', 'bloodymary'
     - **Description**: Chooses the model for image generation. Note that mohawk is SDXL custom model and SDXL workflows are applied
 
 !!! info "LORAs (Low-Rank Adaptation) (`--lora`) [Learn More](lora/lora.md)"

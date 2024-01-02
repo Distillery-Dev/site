@@ -1,4 +1,5 @@
 # Suggest Overview
+See details about /suggest feature under [LLM](../../Parameters/llm/llm.md) parameter documentation
 
 ## Available Additional Parameters for /suggest:
 
