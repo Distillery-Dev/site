@@ -24,7 +24,7 @@ Before diving into practical examples, let's understand the syntax and options a
 | `--adapt3`      | Optional     | `--adapt3 <URL>`     | Optional third image input.                         |
 | `--adapt4`      | Optional     | `--adapt4 <URL>`     | Optional fourth image input.                        |
 
-Each `--adapt` parameter requires a URL that points to an image. You can use up to four images per generation, allowing for complex and nuanced image generations. Remember that the `--adaptweight` parameter adjusts the strength of the IP Adapter's influence on the generation process, allowing you to fine-tune how much the provided images impact the final result.
+Each `--adapt` parameter requires a URL that points to an image. You can use up to four images per generation, allowing for complex and nuanced image generations. The `--adaptweight` parameter adjusts the strength of the IP Adapter's influence on the generation process, allowing you to fine-tune how much the provided images impact the final result.
 
 ### Simple Example:
 Let's start with this image from pexels.com. We uploaded it on Discord and got an URL.
