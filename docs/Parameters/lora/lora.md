@@ -21,7 +21,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | LoRA name  | Creator  | Description  | Activation words  | Available In                        |
 |------------|----------|--------------|-------------------|-------------------------------------|
 | ```analog``` | [alenknight](https://civitai.com/user/alenknight) | Analog photography | ```analog style``` | [Link](https://civitai.com/models/52648/analog-diffusion-lora) |
-| ```anime``` | [Distillery](distillery.dev) | Anime LoRA (balanced) | ```kiri_fox``` | TBD |
+| ```anime``` | [Distillery](https://distillery.dev) | Anime LoRA (balanced) | ```kiri_fox``` | TBD |
 | ```animeminimalist``` | [hortacreator](https://civitai.com/user/hortacreator/models) | Minimalist Anime Style | ```anime minimalist``` | [Link](https://civitai.com/models/24833/minimalist-anime-style) |
 | ```architecture``` | [xjdeng](https://civitai.com/user/xjdeng/models) | Photorealistic architectural images | ```amazingarchitecture``` | [Link](https://civitai.com/models/107455?modelVersionId=125987) |
 | ```atmosphere``` | [Eisthol](https://civitai.com/user/Eisthol/models) | Adds details and ambiance to a scene | ```None``` | [Link](https://civitai.com/models/75164/atmosphere) |
@@ -63,7 +63,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | ```gta``` | [vizsumit](https://civitai.com/user/vizsumit/models) | GTA style drawings | ```comic character``` | [Link](https://civitai.com/models/66719?modelVersionId=161686) |
 | ```isometric``` | [CitronLegacy](https://civitai.com/user/CitronLegacy/models) | Isometric views | ```Isometric_Setting``` | [Link](https://civitai.com/models/118775/stylized-setting-isometric) |
 | ```isometricdnd``` | [Tomas_Aguilar](https://civitai.com/user/Tomas_Aguilar) | Isometric interiors for D&D/RPG | ```isometricclas2nive, isometricnive``` | [Link](https://civitai.com/models/80719/table-rpg-dandd-maps-isometric-room) |
-| ```kiri``` | [Distillery](distillery.dev) | Anime LoRA (strong) | ```kiri_fox``` | TBD |
+| ```kiri``` | [Distillery](https://distillery.dev) | Anime LoRA (strong) | ```kiri_fox``` | TBD |
 | ```kurzgesagt``` | [chilon249](https://civitai.com/user/chilon249/models) | Kurzgesagt drawing style | ```kurzgesagt, vector art``` | [Link](https://civitai.com/models/10098?modelVersionId=12006) |
 | ```lego``` | [LordJia](https://huggingface.co/lordjia) | Makes anything Lego | ```LEGO Creator, LEGO MiniFig, LEGO BrickHeadz``` | [Link](https://civitai.com/models/92444?modelVersionId=150123) |
 | ```lightning``` | [DitamAi](https://twitter.com/DitamAi_) | Create more consistent lightning | ```Lightning, Lighting``` | [Link](https://civitai.com/models/10222/lightningvfx-create-more-consistent-lightning) |
@@ -86,7 +86,7 @@ The following LoRAs are available for our standard models (bloodymary, vodka and
 | ```playfulcartoon``` | [RexelB](https://civitai.com/user/RexelB/models) | Colorful lineless art style for western drawings | ```playfulwhimsy style, sprinkledpastels style``` | [Link](https://civitai.com/models/18812/playful-whimsy-lineless-illustrations) |
 | ```postapocalypse``` | [konyconi](https://civitai.com/user/konyconi/models) | Postapocalypse style | ```postapocalypse``` | [Link](https://civitai.com/models/20665/postapocalypse-5mb-lora-extraction) |
 | ```psychedelicnoir``` | [Ciro_Negrogni](https://linktr.ee/ciro_negrogni) | Intricate noir patterns and surreal imagery | ```psychedelic_noir``` | [Link](https://civitai.com/models/120638?modelVersionId=131218) |
-| ```realism``` | [Distillery](distillery.dev) | Photorealistic and prompt-compliant generations | ```None``` | [Link](https://civitai.com/models/90467/vodkaportraits-photorealism) |
+| ```realism``` | [Distillery](https://distillery.dev) | Photorealistic and prompt-compliant generations | ```None``` | [Link](https://civitai.com/models/90467/vodkaportraits-photorealism) |
 | ```retrofuturism``` | [konyconi](https://civitai.com/user/konyconi/models) | 1970 retrofuturistic aesthetics | ```1970RetroFuturism``` | [Link](https://civitai.com/models/64235/1970retrofuturism) |
 | ```retroscifi``` | [natinitakira](https://civitai.com/user/natinitakira/models) | Imitates artistic renderings of space artists from the 60-70s | ```None``` | [Link](https://civitai.com/models/58839/retro-sci-fi) |
 | ```retrowave``` | [DmitryPlsnk](https://civitai.com/user/DmitryPlsnk/models) | Sci-fi/retrowave style | ```retrowave``` | [Link](https://civitai.com/models/73249/retrowave) |

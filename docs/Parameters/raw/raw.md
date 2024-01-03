@@ -27,4 +27,5 @@ Here's how using --raw changes the resulted generation:
 /serve prompt:tennis ball --seed 123 --raw
 ```
 ![With Raw](2_raw.png){: width="500px" }
+
 This prompt is taken as it is, without any additional quality-improving words, leading potentially to a different style or quality of the generated image.

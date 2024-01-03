@@ -11,6 +11,6 @@
 | `--adaptweight`       | [Adaptweight](../../Parameters/adapt/adapt.md)              | Adjust IPAdapter strength `--adaptweight 0.3` |
 | `--sharpen`           | [Sharpen](../../Parameters/sharpen/sharpen.md)                          | Adjust sharpening value `--sharpen 0` |
 | `--inpaintcontrol`    | [Inpainting Control](../../Parameters/inpaint/inpaint.md) | SD15 only, adjust strength of controlnet used for inpainting `--inpaintcontrol 0` |
-| `--refinerpass`       | [Refiner Pass](../../Parameters/upscale/upscale.md)             | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5` |
-| `--zoomoutfactor`     | [Zoom Out Factor](../../Parameters/zoomout/zoomout.md)      | Control how much the image zooms out `--zoomoutfactor 0.7` |
+| `--refinerpass`       | [Refiner Pass](../../Parameters/upscale_method/upscale_method.md)             | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5` |
+| `--zoomoutfactor`     | See details on this page      | Control how much the image zooms out `--zoomoutfactor 0.7` |
 
