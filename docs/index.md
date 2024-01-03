@@ -73,6 +73,6 @@ You can use /command-infos in Distillery Discord for a quick summary of some of 
 
 - [Subscriptions](Subscriptions/subscriptions_overview.md)
 - [Parameters](Parameters/parameters_overview.md)
-- [Other Workflows](Alternative Workflows/commands_overview.md)
+- [Other Workflows](Distillery Workflows/commands_overview.md)
 
 ---

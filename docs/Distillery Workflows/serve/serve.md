@@ -44,3 +44,57 @@ Refer to the bellow list of parameters that can be added to /serve command to ut
 | `--cutoffweight`       | Cutoffweight | Adjust Cutoff weight `--cutoffweight 1.5`                   |
 
 ## Additonal Prompt Control with the Special Syntax
+
+### Token Weights
+Crafting Stable Diffusion prompts is a topic beyond this documentation but there are a few syntax tricks in Distillery that are worth discussing since they often get forgotten.
+
+When writing a prompt, additional weights can be given to individual words or phrases within the prompt by adding parentheses around them. The effect can be amplified by increasing the number of parentheses added.
+Alternatively, the same can be achieved by adding parentheses around the word and denoting specific multiplier for the increased weight.
+
+For example if we start with a prompt `a cat and a dog` and want to increase the weight of the word `a dog`, we can write either `a cat and (a dog)` or `a cat and (a dog:1.1)`.
+Each parentheses increases the value by 10%. Thus `a cat and ((a dog))` is equivalent to writing `a cat and (a dog:1.21)`. Then `a cat and (((a dog)))` is the same as `a cat and (a dog:1.331)` and so on. See it in action:
+
+```simpletext
+/serve prompt:a cat and a dog --seed 123
+```
+![standard](1_standard_catdog.png){: width="500px" }
+
+```simpletext
+/serve prompt:a cat and (a dog:1.21) --seed 123
+```
+![weighted](2_weighted_catdog.png){: width="500px" }
+
+### Prompt Region Cutoffs
+
+The cutoff feature is an advanced prompting-related feature allowing control over the effect that certain attributes have on specified subsets of the prompt. It is an implementation of the cutoff script ([Cutoff](https://github.com/BlenderNeko/ComfyUI_Cutoff?tab=readme-ov-file)) in Distillery and can be particularly useful in use cases with multiple subjects and detailed elements.
+
+Unfortunately, the feature is still experimental and typically requires multiple attempts and alterations to get the desired results. However, when it works, it can be extremely powerful.
+
+Given the specificity of the syntax, let's explore it with a practical example:
+
+Let's say we want to generate an image of a black dog with blue eyes and a green tie.
+
+```simpletext
+/serve prompt:a black dog with blue eyes and a green tie --seed 123
+```
+![cutoff_1](3_cutoff_example_1.png){: width="500px" }
+
+As it usually happens, we observe the prompt part 'blue' has bled beyond the intended eye part and turned the tie into blue as well.
+Cutoff feature tries to addresses exactly this. It's achieved by the combination of two adjustments to the prompt syntax. 
+
+First, the region within which the prompt should be contained is constrained with the double colons from both sides. So in this case `::blue eyes::`. And then, the word to which the prompt part needs to be applied must be capitalized. So in this case we end up with `::blue EYES::`. The new prompt and the result looks like this:
+
+```simpletext
+/serve prompt:a black dog with ::blue EYES:: and a green tie --seed 123
+```
+![cutoff_2](4_cutoff_example_2.png){: width="500px" }
+
+Even if not perfect, we see that now blue color is no longer applied to the tie.
+With a bit more experimentation, and given the fact that cutoff trick can be applied to multiple parts of the prompt, we ended up with a prompt like this:
+
+```simpletext
+/serve prompt:a black dog with ::(blue EYES):: and a ::(green TIE):: --seed 123
+```
+![cutoff_3](5_cutoff_example_3.png){: width="500px" }
+
+And the result is much closer to the original intent.
