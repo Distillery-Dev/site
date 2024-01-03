@@ -1,4 +1,16 @@
 # Serve Overview
+/serve is the main command on Distillery allowing text to image generation. In it's very basic form, type /serve followed by the descriptive text of the image that you'd like to generate. Example:
+
+```simpletext
+/serve prompt: old bartender in the bar with a long beard
+```
+
+!!! tip "Free Daily Trial"
+    As a free-trial user you can instead use /serve-free command in special channels where trial generations are allowed.
+
+However, using just a text input is a very basic approach at Distillery. Distillery really excels with its large feature list that allow users to achieve fine-level control over the image generation process. All with the terms and approaches that are openly disclosed and known by the AI Art enthusiasts.
+
+Refer to the bellow list of parameters that can be added to /serve command to utilize the full functionality.
 
 ## Available Additional Parameters:
 
@@ -31,3 +43,4 @@
 | `--refinerpass`       | Refinerpass | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5`                   |
 | `--cutoffweight`       | Cutoffweight | Adjust Cutoff weight `--cutoffweight 1.5`                   |
 
+## Additonal Prompt Control with the Special Syntax

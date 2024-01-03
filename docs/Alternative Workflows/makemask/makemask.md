@@ -24,7 +24,7 @@ Let's start with an image that we want to mask. It is a Distillery generated ima
 
 ![Starting](1_start.png){: width="500px" }
 
-## Basic Masking
+### Basic Masking
 
 To get a sense of what's going on, let's simply pass the image URL to the the /makemask command.
 
