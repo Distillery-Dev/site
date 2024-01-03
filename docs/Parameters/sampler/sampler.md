@@ -10,3 +10,4 @@ Currently, `--sampler` has two allowed values: `--sampler legacy` (default) or `
 The `sampler legacy` refers to UniPC sampler in the case of SD 1.5 models (see [UniPC](https://github.com/wl-zhao/UniPC)) or EulerAncestral sampler in the case of SDXL based models (see [EulerAncestral](https://huggingface.co/docs/diffusers/api/schedulers/euler_ancestral)).
 
 ### LCM Overview
+*Documentation Coming Soon*

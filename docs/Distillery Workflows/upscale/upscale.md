@@ -1,5 +1,7 @@
 # Upscale Overview
 
+*Detailed Documentation Coming Soon*
+
 ## Available Additional Parameters for /upscale:
 
 | Parameter            | Link to Docs (WIP, to be added)                                    | Simple Overview                     |

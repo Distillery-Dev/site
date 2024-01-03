@@ -1,4 +1,5 @@
 # Zoomout Overview
+*Detailed Documentation Coming Soon*
 
 ## Available Additional Parameters for /zoomout:
 
