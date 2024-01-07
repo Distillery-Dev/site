@@ -1,5 +1,13 @@
 # Zoomout Overview
-*Detailed Documentation Coming Soon*
+
+`/zoomout` is a feature in Distillery that allows users to expand their generated images in all four directions. It works by adding an empty frame around the original image and then running the Stable Diffusion process to fill in that frame. This feature is only applicable to Distillery-generated images.
+
+Please note that the implementation of `/zoomout` differs significantly between SDXL and SD1.5-based models, affecting the quality and behavior of the output.
+
+!!! note "--lazy zoomouts"
+    The current version of `/zoomout` may tend to produce less detailed expansions. This can be mitigated by adjusting the `--power` and `--cfg` parameters.
+
+To use `/zoomout`, you will need a Distillery-generated image url that should be provided to the `/zoomout` command.
 
 ## Available Additional Parameters for /zoomout:
 
