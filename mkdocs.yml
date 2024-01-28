@@ -53,8 +53,9 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+
 
 nav:
   - Quick Start: index.md
@@ -85,6 +86,12 @@ nav:
       - /Command-infos: Distillery Workflows/command_infos/command_infos.md
       - /Suggest: Distillery Workflows/suggest/suggest.md
       - /Makemask: Distillery Workflows/makemask/makemask.md
+  - LoRA Training (/Distill):
+    - Overview: Distill/distill_overview.md
+    - Distill Command: Distill/distill_command.md
+    - Single Image Training: Distill/single_image.md
+    - Manage LoRAs: Distill/manage_loras.md
+    - Pricing: Distill/distill_pricing.md
   - Subscriptions: 
     - Subscriptions Overview: Subscriptions/subscriptions_overview.md
     - Early User Subscription: Subscriptions/early_user.md
