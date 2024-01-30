@@ -28,7 +28,7 @@
     - **Description**: A simple command to view your user level information on user status, credits, usage, available LoRAs, and so on
     - **Usage**: type /user-stats
 
-!!! info "Manage Your LoRAs (`/manage-lora`) [Learn More](../Distill/manage_loras.md)"
+!!! info "Manage Your LoRAs (`/manage-lora`) [Learn More](../Distill/manage_lora.md)"
     - **Description**: A command that allows you to view and update details for LoRAs available under your user.
     - **Usage**: type /manage-lora <LoRA Name>
 
