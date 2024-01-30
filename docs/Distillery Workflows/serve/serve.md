@@ -28,10 +28,13 @@ Refer to the bellow list of parameters that can be added to /serve command to ut
 | `--inpaint`           | [Inpainting](../../Parameters/inpaint/inpaint.md)         | Inpaint/change only the masked area of the image `--inpaint <img with mask url>`                   |
 | `--inpaintmaskfeather`| [Inpainting](../../Parameters/inpaint/inpaint.md) | Adjust feathering value when inpainting `--inpaintmaskfeather 2`               |
 | `--inpaintmaskgrow`   | [Inpainting](../../Parameters/inpaint/inpaint.md)     | Adjust mask size when inpainting `--inpaintmaskgrow 20`               |
+| `--cutoffweight`   | [serve](/)     | adjust cutoff weights `--cutoffweight 0.5`               |
 | `--llm`               | [LLM](../../Parameters/llm/llm.md)                 | Modify your prompt with the help of LLMs `--llm crazy`                   |
 | `--lcmweight`         | [Sampler](../../Parameters/sampler/sampler.md)     | Only applicable when LCM sampler is used                   |
 | `--adapt, --adapt2, --adapt3, --adapt4` | [IPAdapters](../../Parameters/adapt/adapt.md) | use IPAdapters to prompt with images `--adapt <img url>`          |
 | `--adaptweight`       | [IPAdapters](../../Parameters/adapt/adapt.md) | Adjust IPAdapter strength `--adaptweight 0.3`                   |
+| `--adaptweight1, --adaptweight2, --adaptweight3, --adaptweight4` | [IPAdapters](../../Parameters/adapt/adapt.md) | adjust individual weights of IPadapters when using multiple adapters `--adaptweight2 0.2`          |
+| `--adaptface`       | [IPAdapters](../../Parameters/adapt/adapt.md) | Toggle type parameters to switch on face IPadapter model `--adaptface`                   |
 | `--sharpen`           | [Sharpen](../../Parameters/sharpen/sharpen.md)         | Adjust sharpening value `--sharpen 0`                   |
 | `--sampler`           | [Sampler](../../Parameters/sampler/sampler.md)         | Change sampling method `--sampler lcm`                   |
 | `--raw`               | [RAW](../../Parameters/raw/raw.md)                 | Disable some of the added processing for more control `--raw`                   |
@@ -41,7 +44,6 @@ Refer to the bellow list of parameters that can be added to /serve command to ut
 | `--imagedenoise`      | [Image2image](../../Parameters/img2img/img2img.md)    | Adjust the portion of initial image to keep for image2image `--imagedenoise 0.8`               |
 | `--upscalemethod`     | [Upscale](../../Parameters/upscale_method/upscale_method.md) | Choose the method to upscale or disable it. `--upscalemethod none`               |
 | `--refinerpass`       | Refinerpass | SDXL only, choose portion of generation to be done with refiner model `--refinerpass 0.5`                   |
-| `--cutoffweight`       | Cutoffweight | Adjust Cutoff weight `--cutoffweight 1.5`                   |
 
 ## Additonal Prompt Control with the Special Syntax
 

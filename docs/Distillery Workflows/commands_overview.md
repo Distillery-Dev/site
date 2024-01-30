@@ -24,6 +24,14 @@
     - **Description**: A simple command to view information about Distillery commands on Discord.
     - **Usage**: type /command-infos
 
+!!! info "User Stats (`/user-stats`) [Learn More](user_stats/user_stats.md)"
+    - **Description**: A simple command to view your user level information on user status, credits, usage, available LoRAs, and so on
+    - **Usage**: type /user-stats
+
+!!! info "Manage Your LoRAs (`/manage-lora`) [Learn More](../Distill/manage_loras.md)"
+    - **Description**: A command that allows you to view and update details for LoRAs available under your user.
+    - **Usage**: type /manage-lora <LoRA Name>
+
 !!! info "Suggest Prompt (`/suggest`) [Learn More](suggest/suggest.md)"
     - **Description**: Transforms your text prompt into an alternative version for variations and quality improvement
     - **Usage**: type /suggest followed by your prompt text that will be transformed into a new version. Additional parameter --llm allows selection of LLM model. For now only `--llm crazy` is available
@@ -32,3 +40,7 @@
     - **Description**: Create mask in alpha channel of the image. The generated mask can be used for inpainting (and other future features) as an input.
     - **Usage**: See Learn More for the detailed explanation on how to generate masks. Type /makemask followed by Discord URL of the image to get started.
     - **Note**: The command also accepts images that were not generated in Distillery.
+
+!!! info "Distill LoRA (`/distill`) [Learn More](../Distill/distill_overview.md)"
+    - **Description**: A command that allows you to train your own LoRAs. See details via the link
+    - **Usage**: type /distill <img_url>
