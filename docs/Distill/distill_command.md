@@ -11,10 +11,26 @@ The `/distill` command works like any other commands on Distillery. For now, it 
 ```plaintext
 /distill prompt:https://cdn.discordapp.com/attachments/1132450797750337597/1200711915186442280/distillery_072e07ac-521f-4c4d-910b-f9e7494ba6ee.png
 ```
-(Screenshot of the command launch goes here)
+![distill_launch](distill_start_1.png){: width="500px" }
 
 Once the command is sent, if no errors occur, you will see a confirmation message such as:
-(Screenshot of the confirmation message goes here)
+![distill_launch_2](distill_start_2.png){: width="500px" }
 
 Finally, once the training is complete, you will see a confirmation message:
-(Screenshot of the training completion message goes here)
+![distill finish](3_distill_finish_1.png){: width="500px" }
+
+
+When the `/distill` command is initiated, a unique name is assigned to the LoRA that is displayed both at the start of the training and once the training is finished. In this case, it was "rifttami". This name is crucial as it serves multiple purposes in Distillery:
+
+### LoRA Name
+- **LoRA Name**: In this case, 'rifttami' is the assigned name. This name can be used with the `--lora` parameter when you want to utilize this particular LoRA in your image generation.
+
+### Activation Word
+- **Activation Word**: The same 'rifttami' also serves as the LoRA activation word. This can be included in your text prompt. For more details, refer to the Single Image LoRA section.
+
+### Managing LoRAs
+- **Manage LoRA**: You can use the name 'rifttami' with the `/manage-lora` command to view or update details about this specific LoRA.
+
+### User Statistics
+- **User Stats**: When using the `/user-stats` command, 'rifttami' will be listed under the "Loras Owned" section, helping you keep track of your custom LoRAs.
+
