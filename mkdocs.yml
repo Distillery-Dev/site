@@ -84,15 +84,18 @@ nav:
       - /Upscale: Distillery Workflows/upscale/upscale.md
       - /Checkmetadata: Distillery Workflows/checkmetadata/checkmetadata.md
       - /Command-infos: Distillery Workflows/command_infos/command_infos.md
+      - /User-stats: Distillery Workflows/user_stats/user_stats.md
+      - /Manage-lora: Distill/manage_loras.md
       - /Suggest: Distillery Workflows/suggest/suggest.md
       - /Makemask: Distillery Workflows/makemask/makemask.md
+      - /Distill: Distill/distill_overview.md
   - LoRA Training (/Distill):
-    - Overview: Distill/distill_overview.md
-    - Distill Command: Distill/distill_command.md
-    - Single Image Training: Distill/single_image.md
-    - Manage LoRAs: Distill/manage_loras.md
-    - Pricing: Distill/distill_pricing.md
+      - Overview: Distill/distill_overview.md
+      - Distill Command: Distill/distill_command.md
+      - Single Image Training: Distill/single_image.md
+      - Manage LoRAs: Distill/manage_loras.md
+      - Pricing: Distill/distill_pricing.md
   - Subscriptions: 
-    - Subscriptions Overview: Subscriptions/subscriptions_overview.md
-    - Early User Subscription: Subscriptions/early_user.md
-    - Founder's Pass: Subscriptions/founder_pass.md
+      - Subscriptions Overview: Subscriptions/subscriptions_overview.md
+      - Early User Subscription: Subscriptions/early_user.md
+      - Founder's Pass: Subscriptions/founder_pass.md
