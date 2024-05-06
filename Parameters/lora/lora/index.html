@@ -1,0 +1,2652 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../model/model/">
+      
+      
+        <link rel="next" href="../../control/control/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>LoRAs - Distillery Documents</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="LoRAs - Distillery Documents" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/Parameters/lora/lora.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="LoRAs - Distillery Documents" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/Parameters/lora/lora.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lora-low-rank-adaptation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Distillery Documents" class="md-header__button md-logo" aria-label="Distillery Documents" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Distillery Documents
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LoRAs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../parameters_overview/" class="md-tabs__link">
+          
+  
+  Parameters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Distillery%20Workflows/commands_overview/" class="md-tabs__link">
+          
+  
+  Distillery Workflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Distill/distill_overview/" class="md-tabs__link">
+          
+  
+  LoRA Training (/Distill)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Subscriptions/subscriptions_overview/" class="md-tabs__link">
+          
+  
+  Subscriptions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Distillery Documents" class="md-nav__button md-logo" aria-label="Distillery Documents" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Distillery Documents
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Parameters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Parameters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parameters_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parameters Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../negative_prompt/negative_prompt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Negative Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seed/seed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfg/cfg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CFG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aspect_ratio/aspect_ratio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aspect Ratio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../denoise/denoise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Denoise Strength
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LoRAs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    LoRAs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loras-for-sd-15-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loras for SD 1.5 models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loras-for-sdxl-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loras for SDXL models
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../control/control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlnet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../img2img/img2img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image to Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inpaint/inpaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inpainting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../llm/llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adapt/adapt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP Adapter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharpen/sharpen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharpen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sampler/sampler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sampler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raw/raw/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raw Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upscale_method/upscale_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upscale Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Distillery Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Distillery Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/commands_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commands Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/serve/serve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Serve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/zoomout/zoomout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Zoomout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/upscale/upscale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Upscale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/checkmetadata/checkmetadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Checkmetadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/command_infos/command_infos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Command-infos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/user_stats/user_stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /User-stats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/manage_lora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Manage-lora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/suggest/suggest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Suggest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distillery%20Workflows/makemask/makemask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Makemask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/distill_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Distill
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    LoRA Training (/Distill)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            LoRA Training (/Distill)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/distill_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Distill
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/distill_command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distill Command
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/single_image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Image Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/manage_lora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /Manage-lora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Distill/distill_pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Subscriptions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Subscriptions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Subscriptions/subscriptions_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subscriptions Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Subscriptions/early_user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Early User Subscription
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Subscriptions/founder_pass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Founder's Pass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lora-low-rank-adaptation">LoRA (Low Rank Adaptation)</h1>
+<p>LoRA, or <strong>Low Rank Adaptation</strong>, is an optional model that can be appended to the generation. Each LoRA adds a small neural network to the original model, aiming to influence it towards its specific generative goal. By adding <code>--lora</code> followed by the name of the LoRA model to be used, you can add it to the generation. </p>
+<p>By default, no LoRAs are used unless specifically asked for by the user.</p>
+<p>Up to 5 LoRAs can be used at any single time, but their individual influence is reduced by every additional LoRA model. This is automatically done by Distillery's backend in order to preserve the quality of the generative output, since too many LoRAs may generate additional noise in the final product.</p>
+<div class="admonition tip">
+<p class="admonition-title">How LoRAs actually work</p>
+<p>A LoRA is controlled by two main parameters: its <strong>weight</strong>, which determines how strongly its influence must be on the original model's output, and its <strong>activation keywords</strong>, which are the words that must be used in order to let the LoRA know it must work. Distillery is handling the weight of the LoRA automatically, so the only thing the user must focus on is the generation prompt.</p>
+</div>
+<p>While the best LoRAs will always be the ones trained over the model that is invoked for the generation, most LoRAs can be ported from one model checkpoint to another of the same family (that is: SD1.5-based LoRAs work across most SD1.5 model checkpoints, and the same goes for SDXL). </p>
+<p>LoRAs are unique tools at our disposal in the generative art toolkit. Think of them as "cartridges" to the model checkpoints' "consoles".</p>
+<h2 id="loras-for-sd-15-models">Loras for SD 1.5 models</h2>
+<p>The following LoRAs are available for our SD1.5 based models:</p>
+<table>
+<thead>
+<tr>
+<th>LoRA name</th>
+<th>Creator</th>
+<th>Description</th>
+<th>Activation words</th>
+<th>Available In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>analog</code></td>
+<td><a href="https://civitai.com/user/alenknight">alenknight</a></td>
+<td>Analog photography</td>
+<td><code>analog style</code></td>
+<td><a href="https://civitai.com/models/52648/analog-diffusion-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>anime</code></td>
+<td><a href="https://distillery.dev">Distillery</a></td>
+<td>Anime LoRA (balanced)</td>
+<td><code>kiri_fox</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>animeminimalist</code></td>
+<td><a href="https://civitai.com/user/hortacreator/models">hortacreator</a></td>
+<td>Minimalist Anime Style</td>
+<td><code>anime minimalist</code></td>
+<td><a href="https://civitai.com/models/24833/minimalist-anime-style">Link</a></td>
+</tr>
+<tr>
+<td><code>architecture</code></td>
+<td><a href="https://civitai.com/user/xjdeng/models">xjdeng</a></td>
+<td>Photorealistic architectural images</td>
+<td><code>amazingarchitecture</code></td>
+<td><a href="https://civitai.com/models/107455?modelVersionId=125987">Link</a></td>
+</tr>
+<tr>
+<td><code>atmosphere</code></td>
+<td><a href="https://civitai.com/user/Eisthol/models">Eisthol</a></td>
+<td>Adds details and ambiance to a scene</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/75164/atmosphere">Link</a></td>
+</tr>
+<tr>
+<td><code>avatarnavi</code></td>
+<td><a href="https://civitai.com/user/SeventKnight/models">SeventKnight</a></td>
+<td>Transforms characters into Na’vi Avatar aliens</td>
+<td><code>na'vi, avatar, blue skin, aoa</code></td>
+<td><a href="https://civitai.com/models/21787/alloutnavi">Link</a></td>
+</tr>
+<tr>
+<td><code>badvhs</code></td>
+<td><a href="https://civitai.com/user/zarxrax/models">zarxrax</a></td>
+<td>Old, poor-quality VHS tape</td>
+<td><code>vhs footage, vhs</code></td>
+<td><a href="https://civitai.com/models/3679/bad-vhs">Link</a></td>
+</tr>
+<tr>
+<td><code>barbie</code></td>
+<td><a href="https://tensor.art/u/628134534906582880">RIXYN</a></td>
+<td>Makes anything Barbie</td>
+<td><code>ts_barbie</code></td>
+<td><a href="https://civitai.com/models/73934/barbie-or-toy-story-3">Link</a></td>
+</tr>
+<tr>
+<td><code>baroque</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Baroque aesthetics style</td>
+<td><code>baroqueAI</code></td>
+<td><a href="https://civitai.com/models/38414/baroqueai">Link</a></td>
+</tr>
+<tr>
+<td><code>battleworn</code></td>
+<td><a href="https://civitai.com/user/Endless8/models">Endless8</a></td>
+<td>Creates characters is a battle worn state</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/24015/battleworn-concept">Link</a></td>
+</tr>
+<tr>
+<td><code>biomechanical</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>H. R. Giger-inspired biomechanical images</td>
+<td><code>hrgiger</code></td>
+<td><a href="https://civitai.com/models/23698?modelVersionId=30077">Link</a></td>
+</tr>
+<tr>
+<td><code>bladerunner</code></td>
+<td><a href="https://twitter.com/LuisaCoolSouza">luisa_pinguin</a></td>
+<td>Makes Blade Runner 2049 movie stills</td>
+<td><code>moviestill</code></td>
+<td><a href="https://civitai.com/models/5566/luisap-bladerunner2049-still-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>bluetheme</code></td>
+<td><a href="https://civitai.com/user/phoenix_ms/models">phoenix_ms</a></td>
+<td>Creates melancholic blue scenes involving rain and dusk</td>
+<td><code>phblue, scenery, blue theme</code></td>
+<td><a href="https://civitai.com/models/76012/rain-blue-and-sarrow-stylescenery">Link</a></td>
+</tr>
+<tr>
+<td><code>boho</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Boho style, by konyconi</td>
+<td><code>bohoai</code></td>
+<td><a href="https://civitai.com/models/51966/bohoai">Link</a></td>
+</tr>
+<tr>
+<td><code>candyland</code></td>
+<td><a href="https://tensor.art/u/628134534906582880">RIXYN</a></td>
+<td>Background becomes candy (think Sugar Rush from Wreck-it Ralph)</td>
+<td><code>candyland, full background</code></td>
+<td><a href="https://civitai.com/models/96639/candyland">Link</a></td>
+</tr>
+<tr>
+<td><code>caravaggio</code></td>
+<td><a href="https://civitai.com/user/Ashley_Jones_fan/models">Ashley_Jones_fan</a></td>
+<td>Artist LoRA: Caravaggio oil paintings</td>
+<td><code>CARAVAGGIO</code></td>
+<td><a href="https://civitai.com/models/119790/caravaggio-oil-painting-style">Link</a></td>
+</tr>
+<tr>
+<td><code>caricature</code></td>
+<td><a href="https://civitai.com/user/vizsumit/models">vizsumit</a></td>
+<td>Caricature style</td>
+<td><code>caricature</code></td>
+<td><a href="https://civitai.com/models/56978/cartoon-caricature">Link</a></td>
+</tr>
+<tr>
+<td><code>charactersheet</code></td>
+<td><a href="https://tensor.art/u/612567052280105600">YeiyeiArt</a></td>
+<td>Creates character design sheets</td>
+<td><code>CharacterSheet</code></td>
+<td><a href="https://civitai.com/models/100435/character-design-sheet-helper-3-perspectives-comissions-opens-by-yeiyeiart">Link</a></td>
+</tr>
+<tr>
+<td><code>chibi</code></td>
+<td><a href="https://civitai.com/user/luciI">lucil</a></td>
+<td>Chibi style</td>
+<td><code>chibi</code></td>
+<td><a href="https://civitai.com/models/22820/chibi-artstyle">Link</a></td>
+</tr>
+<tr>
+<td><code>cool</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Cool temperature colors (blue)</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/127535/color-temperature-slider-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>crayon</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Crayon drawing style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/120853?modelVersionId=131468">Link</a></td>
+</tr>
+<tr>
+<td><code>cyberpunk</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Cyberpunk aesthetics, by konyconi</td>
+<td><code>CyberPunkAI, neon</code></td>
+<td><a href="https://civitai.com/models/77121/neoncyberpunkai">Link</a></td>
+</tr>
+<tr>
+<td><code>darkandlight</code></td>
+<td><a href="https://civitai.com/user/Eisthol/models">Eisthol</a></td>
+<td>Intricate drawings with deep dark &amp; light contrast</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/24584/dark-and-light">Link</a></td>
+</tr>
+<tr>
+<td><code>darkchaos</code></td>
+<td><a href="https://civitai.com/user/DmitryPlsnk/models">DmitryPlsnk</a></td>
+<td>Horror: dark, chaotic images</td>
+<td><code>chaosmix</code></td>
+<td><a href="https://civitai.com/models/98602?modelVersionId=105462">Link</a></td>
+</tr>
+<tr>
+<td><code>darkfantasy</code></td>
+<td><a href="https://civitai.com/user/dabbinggoose">dabbinggoose</a></td>
+<td>Dark fantasy drawings</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/24934/dark-fantasy">Link</a></td>
+</tr>
+<tr>
+<td><code>darktheme</code></td>
+<td><a href="https://civitai.com/user/rMada/models">rMada</a></td>
+<td>Darker images</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/87575">Link</a></td>
+</tr>
+<tr>
+<td><code>davinci</code></td>
+<td><a href="https://civitai.com/user/DarkBeam">DarkBeam</a></td>
+<td>Artist LoRA: Leonardo da Vinci oil paintings</td>
+<td><code>wjqleonardo</code></td>
+<td><a href="https://civitai.com/models/63331/leonardo-da-vinci-style">Link</a></td>
+</tr>
+<tr>
+<td><code>deep</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Depth of field: deep</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/135380?modelVersionId=149218">Link</a></td>
+</tr>
+<tr>
+<td><code>detail</code></td>
+<td><a href="https://civitai.com/user/rMada/models">rMada</a></td>
+<td>Adds details to images</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/87378/difconsistency-detail-pack">Link</a></td>
+</tr>
+<tr>
+<td><code>dragon</code></td>
+<td><a href="https://civitai.com/user/IronCatMan/models">IronCatMan</a></td>
+<td>Adds dragons as characters</td>
+<td><code>dragon</code></td>
+<td><a href="https://civitai.com/models/30151?modelVersionId=36321">Link</a></td>
+</tr>
+<tr>
+<td><code>eldenring</code></td>
+<td><a href="https://civitai.com/user/daemonrat/models">daemonrat</a></td>
+<td>Elden Ring style</td>
+<td><code>elden ring style</code></td>
+<td><a href="https://civitai.com/models/7482/elden-ring-lora-extraction">Link</a></td>
+</tr>
+<tr>
+<td><code>environmentart</code></td>
+<td><a href="https://civitai.com/user/Petybear/models">Petybear</a></td>
+<td>Environment art &amp; scenery</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/93826?modelVersionId=120191">Link</a></td>
+</tr>
+<tr>
+<td><code>esoteric</code></td>
+<td><a href="https://linktr.ee/ciro_negrogni">Ciro_Negrogni</a></td>
+<td>Victorian-style occultist/esoteric images</td>
+<td><code>victorian_esoteric</code></td>
+<td><a href="https://civitai.com/models/124678/victorian-esoteric">Link</a></td>
+</tr>
+<tr>
+<td><code>fairytale</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Fairy tale aesthetics, by konyconi</td>
+<td><code>FairyTaleAI</code></td>
+<td><a href="https://civitai.com/models/42260/fairytaleai">Link</a></td>
+</tr>
+<tr>
+<td><code>fat</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Character weight: fat</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/112552?modelVersionId=126824">Link</a></td>
+</tr>
+<tr>
+<td><code>foodphoto</code></td>
+<td><a href="https://civitai.com/user/leroidoesaiart">leroidoesaiart</a></td>
+<td>Food photography</td>
+<td><code>foodphoto</code></td>
+<td><a href="https://civitai.com/models/45322/food-photography">Link</a></td>
+</tr>
+<tr>
+<td><code>futuristicscape</code></td>
+<td><a href="https://linktr.ee/fitcorder">fitcorder</a></td>
+<td>Makes detailed, futuristic spaces and landscapes</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/58764?modelVersionId=92193">Link</a></td>
+</tr>
+<tr>
+<td><code>gameofthrones</code></td>
+<td><a href="https://tensor.art/u/600303455797521413">Lykon</a></td>
+<td>Game of Thrones style characters and scenery</td>
+<td><code>Game of Thrones</code></td>
+<td><a href="https://civitai.com/models/102584/game-of-thrones-style-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>gothicdress</code></td>
+<td><a href="https://civitai.com/user/cyberAngel_/models">cyberAngel_</a></td>
+<td>Gothic style dress</td>
+<td><code>lo_dress</code></td>
+<td><a href="https://civitai.com/models/65283?modelVersionId=116611">Link</a></td>
+</tr>
+<tr>
+<td><code>gothicpunk</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>GothicPunk style</td>
+<td><code>GothicPunkAI</code></td>
+<td><a href="https://civitai.com/models/78695/gothicpunkai">Link</a></td>
+</tr>
+<tr>
+<td><code>gta</code></td>
+<td><a href="https://civitai.com/user/vizsumit/models">vizsumit</a></td>
+<td>GTA style drawings</td>
+<td><code>comic character</code></td>
+<td><a href="https://civitai.com/models/66719?modelVersionId=161686">Link</a></td>
+</tr>
+<tr>
+<td><code>isometric</code></td>
+<td><a href="https://civitai.com/user/CitronLegacy/models">CitronLegacy</a></td>
+<td>Isometric views</td>
+<td><code>Isometric_Setting</code></td>
+<td><a href="https://civitai.com/models/118775/stylized-setting-isometric">Link</a></td>
+</tr>
+<tr>
+<td><code>isometricdnd</code></td>
+<td><a href="https://civitai.com/user/Tomas_Aguilar">Tomas_Aguilar</a></td>
+<td>Isometric interiors for D&amp;D/RPG</td>
+<td><code>isometricclas2nive, isometricnive</code></td>
+<td><a href="https://civitai.com/models/80719/table-rpg-dandd-maps-isometric-room">Link</a></td>
+</tr>
+<tr>
+<td><code>kiri</code></td>
+<td><a href="https://distillery.dev">Distillery</a></td>
+<td>Anime LoRA (strong)</td>
+<td><code>kiri_fox</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>kurzgesagt</code></td>
+<td><a href="https://civitai.com/user/chilon249/models">chilon249</a></td>
+<td>Kurzgesagt drawing style</td>
+<td><code>kurzgesagt, vector art</code></td>
+<td><a href="https://civitai.com/models/10098?modelVersionId=12006">Link</a></td>
+</tr>
+<tr>
+<td><code>lego</code></td>
+<td><a href="https://huggingface.co/lordjia">LordJia</a></td>
+<td>Makes anything Lego</td>
+<td><code>LEGO Creator, LEGO MiniFig, LEGO BrickHeadz</code></td>
+<td><a href="https://civitai.com/models/92444?modelVersionId=150123">Link</a></td>
+</tr>
+<tr>
+<td><code>lightning</code></td>
+<td><a href="https://twitter.com/DitamAi_">DitamAi</a></td>
+<td>Create more consistent lightning</td>
+<td><code>Lightning, Lighting</code></td>
+<td><a href="https://civitai.com/models/10222/lightningvfx-create-more-consistent-lightning">Link</a></td>
+</tr>
+<tr>
+<td><code>marble</code></td>
+<td><a href="https://civitai.com/user/daemonrat/models">daemonrat</a></td>
+<td>Makes marble statues</td>
+<td><code>marblee style, marblee, marblesh</code></td>
+<td><a href="https://civitai.com/models/7702/marblesh-lora-extraction">Link</a></td>
+</tr>
+<tr>
+<td><code>mecha</code></td>
+<td><a href="https://twitter.com/cinsdia?t=oJuy8Qw1BQ5uCXODAlQo5Q&amp;s=09">Cinsdia</a></td>
+<td>Mecha characters</td>
+<td><code>mecha</code></td>
+<td><a href="https://civitai.com/models/76693/mecha">Link</a></td>
+</tr>
+<tr>
+<td><code>minimaldrawing</code></td>
+<td><a href="https://twitter.com/cinsdia?t=oJuy8Qw1BQ5uCXODAlQo5Q&amp;s=09">Cinsdia</a></td>
+<td>Minimalistic hand-drawn art style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/104597/niji-handdrawminimalistlineart">Link</a></td>
+</tr>
+<tr>
+<td><code>minimalvector</code></td>
+<td><a href="https://twitter.com/cinsdia?t=oJuy8Qw1BQ5uCXODAlQo5Q&amp;s=09">Cinsdia</a></td>
+<td>Minimalistic vector art style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/103904/niji-minimal-vector-style">Link</a></td>
+</tr>
+<tr>
+<td><code>modernlogo</code></td>
+<td><a href="https://civitai.com/user/leroidoesaiart/models">leroidoesaiart</a></td>
+<td>Modern corporate logos</td>
+<td><code>modernlogo</code></td>
+<td><a href="https://civitai.com/models/22399/modern-logo">Link</a></td>
+</tr>
+<tr>
+<td><code>neonlight</code></td>
+<td><a href="https://civitai.com/user/Eisthol/models">Eisthol</a></td>
+<td>Drawings with neon lights</td>
+<td><code>neon lights</code></td>
+<td><a href="https://civitai.com/models/50408/neon-light">Link</a></td>
+</tr>
+<tr>
+<td><code>nightmare</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Horror lora by konyconi</td>
+<td><code>NightmarishAI</code></td>
+<td><a href="https://civitai.com/models/56336/nightmarishai">Link</a></td>
+</tr>
+<tr>
+<td><code>nintendo64</code></td>
+<td><a href="https://civitai.com/user/name64/models">name64</a></td>
+<td>Low Poly, Nintendo 64 style</td>
+<td><code>n64style, psxstyle, dsstyle</code></td>
+<td><a href="https://civitai.com/models/85322/icbin64-i-cant-believe-its-not-64">Link</a></td>
+</tr>
+<tr>
+<td><code>noir</code></td>
+<td><a href="https://tensor.art/u/612567052280105600">YeiyeiArt</a></td>
+<td>Noir style</td>
+<td><code>NoirStyle</code></td>
+<td><a href="https://civitai.com/models/125916/film-noir-style-retro-photo-by-yeiyeiart">Link</a></td>
+</tr>
+<tr>
+<td><code>oilpainting</code></td>
+<td><a href="https://civitai.com/user/nnna/models">nnna</a></td>
+<td>Oil painting style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/107165/oil-painting-stick">Link</a></td>
+</tr>
+<tr>
+<td><code>pastelcolor</code></td>
+<td><a href="https://civitai.com/user/nnna/models">nnna</a></td>
+<td>Light colors and pen style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/130868/pastel-color">Link</a></td>
+</tr>
+<tr>
+<td><code>pencil</code></td>
+<td><a href="https://civitai.com/user/L0datmos/models">L0datmos</a></td>
+<td>Pencil drawing style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/110244/drawing">Link</a></td>
+</tr>
+<tr>
+<td><code>pixar</code></td>
+<td><a href="https://civitai.com/user/baiteryamato/models">baiteryamato</a></td>
+<td>Pixar style</td>
+<td><code>pixarstyle</code></td>
+<td><a href="https://civitai.com/models/17303/pixar-style-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>pixelart</code></td>
+<td><a href="https://twitter.com/LuisaCoolSouza">luisa_pinguin</a></td>
+<td>Pixel art</td>
+<td><code>pixel art</code></td>
+<td><a href="https://civitai.com/models/10706/luisap-pixel-art-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>pixhell</code></td>
+<td><a href="https://civitai.com/user/SPYBG/models">SPYBG</a></td>
+<td>Alternative pixel art LoRA</td>
+<td><code>pixelart</code></td>
+<td><a href="https://civitai.com/models/21270/pixhell-15-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>platearmor</code></td>
+<td><a href="https://civitai.com/models/59925/medieval-style-armor-suit-lora">axebro</a></td>
+<td>Makes characters wear medieval full armor suits</td>
+<td><code>armor, medieval armor</code></td>
+<td><a href="https://civitai.com/models/59925/medieval-style-armor-suit-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>playfulcartoon</code></td>
+<td><a href="https://civitai.com/user/RexelB/models">RexelB</a></td>
+<td>Colorful lineless art style for western drawings</td>
+<td><code>playfulwhimsy style, sprinkledpastels style</code></td>
+<td><a href="https://civitai.com/models/18812/playful-whimsy-lineless-illustrations">Link</a></td>
+</tr>
+<tr>
+<td><code>postapocalypse</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Postapocalypse style</td>
+<td><code>postapocalypse</code></td>
+<td><a href="https://civitai.com/models/20665/postapocalypse-5mb-lora-extraction">Link</a></td>
+</tr>
+<tr>
+<td><code>psychedelicnoir</code></td>
+<td><a href="https://linktr.ee/ciro_negrogni">Ciro_Negrogni</a></td>
+<td>Intricate noir patterns and surreal imagery</td>
+<td><code>psychedelic_noir</code></td>
+<td><a href="https://civitai.com/models/120638?modelVersionId=131218">Link</a></td>
+</tr>
+<tr>
+<td><code>realism</code></td>
+<td><a href="https://distillery.dev">Distillery</a></td>
+<td>Photorealistic and prompt-compliant generations</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/90467/vodkaportraits-photorealism">Link</a></td>
+</tr>
+<tr>
+<td><code>retrofuturism</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>1970 retrofuturistic aesthetics</td>
+<td><code>1970RetroFuturism</code></td>
+<td><a href="https://civitai.com/models/64235/1970retrofuturism">Link</a></td>
+</tr>
+<tr>
+<td><code>retroscifi</code></td>
+<td><a href="https://civitai.com/user/natinitakira/models">natinitakira</a></td>
+<td>Imitates artistic renderings of space artists from the 60-70s</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/58839/retro-sci-fi">Link</a></td>
+</tr>
+<tr>
+<td><code>retrowave</code></td>
+<td><a href="https://civitai.com/user/DmitryPlsnk/models">DmitryPlsnk</a></td>
+<td>Sci-fi/retrowave style</td>
+<td><code>retrowave</code></td>
+<td><a href="https://civitai.com/models/73249/retrowave">Link</a></td>
+</tr>
+<tr>
+<td><code>rootsbranches</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Makes objects sprout roots and branches</td>
+<td><code>RootsBranchesAI</code></td>
+<td><a href="https://civitai.com/models/63660/rootsbranchesai">Link</a></td>
+</tr>
+<tr>
+<td><code>saltbae</code></td>
+<td><a href="https://civitai.com/user/FallenIncursio/models">FallenIncursio</a></td>
+<td>Makes the Salt Bae meme position</td>
+<td><code>SaltBaeMeme</code></td>
+<td><a href="https://civitai.com/models/106212/salt-bae-meme-or-concept-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>scifi</code></td>
+<td><a href="https://linktr.ee/ciro_negrogni">Ciro_Negrogni</a></td>
+<td>Sci-fi imagery</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/100489/sci-fi-xl-style">Link</a></td>
+</tr>
+<tr>
+<td><code>shallow</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Depth of field: shallow</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/135380?modelVersionId=149218">Link</a></td>
+</tr>
+<tr>
+<td><code>silhouette</code></td>
+<td><a href="https://civitai.com/user/Eisthol/models">Eisthol</a></td>
+<td>Dark sillhouette images</td>
+<td><code>silhouette, light particles</code></td>
+<td><a href="https://civitai.com/models/28742/light-and-silhouette">Link</a></td>
+</tr>
+<tr>
+<td><code>skull</code></td>
+<td><a href="https://civitai.com/user/muf00d/models">muf00d</a></td>
+<td>Adds skulls to the generation</td>
+<td><code>skull</code></td>
+<td><a href="https://civitai.com/models/82621/skull">Link</a></td>
+</tr>
+<tr>
+<td><code>space</code></td>
+<td><a href="https://civitai.com/user/edobgames/models">edobgames</a></td>
+<td>Model that enhances images from space</td>
+<td><code>space, planet, galaxy, star</code></td>
+<td><a href="https://civitai.com/models/44667/syfyeye1">Link</a></td>
+</tr>
+<tr>
+<td><code>starfield</code></td>
+<td><a href="https://civitai.com/user/zantum/models">zantum</a></td>
+<td>Starfield style</td>
+<td><code>1starfield style</code></td>
+<td><a href="https://civitai.com/models/86638/1starfield">Link</a></td>
+</tr>
+<tr>
+<td><code>starwars</code></td>
+<td><a href="https://tensor.art/u/600303455797521413">Lykon</a></td>
+<td>Star Wars style</td>
+<td><code>star wars</code></td>
+<td><a href="https://civitai.com/models/105329/star-wars-style-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>steampunk</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Steampunk aesthetics, by konyconi</td>
+<td><code>SteampunkAI, CogPunkAI</code></td>
+<td><a href="https://civitai.com/models/59338/steampunk-redone">Link</a></td>
+</tr>
+<tr>
+<td><code>thin</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Character weight: thin</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/112552?modelVersionId=126824">Link</a></td>
+</tr>
+<tr>
+<td><code>tiltshift</code></td>
+<td><a href="https://civitai.com/user/awcolo/models">awcolo</a></td>
+<td>Creates a tilt-shift effect on generations</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/25806/tilt-shift">Link</a></td>
+</tr>
+<tr>
+<td><code>undersea</code></td>
+<td><a href="https://linktr.ee/fitcorder">fitcorder</a></td>
+<td>Underwater generations, both deep and shallow</td>
+<td><code>depths-fc</code></td>
+<td><a href="https://civitai.com/models/59994/undersea-depths-fc-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>vermeer</code></td>
+<td><a href="https://civitai.com/user/Ashley_Jones_fan/models">Ashley_Jones_fan</a></td>
+<td>Artist LoRA: Vermeer oil paintings</td>
+<td><code>VERMEER</code></td>
+<td><a href="https://civitai.com/models/118054/vermeer-oil-painting-style-for-portraits">Link</a></td>
+</tr>
+<tr>
+<td><code>victoriandress</code></td>
+<td><a href="https://civitai.com/user/cyberAngel_/models">cyberAngel_</a></td>
+<td>Victorian style classical dress</td>
+<td><code>lodress</code></td>
+<td><a href="https://civitai.com/models/65283?modelVersionId=116611">Link</a></td>
+</tr>
+<tr>
+<td><code>voidenergy</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Magical blue-violet setting (good for RPG/fantasy horror)</td>
+<td><code>V0id3nergy</code></td>
+<td><a href="https://civitai.com/models/60553/kvoidenergy">Link</a></td>
+</tr>
+<tr>
+<td><code>warm</code></td>
+<td><a href="https://ostris.com/">Ostris</a></td>
+<td>Warm temperature colors (orange)</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/127535/color-temperature-slider-lora">Link</a></td>
+</tr>
+<tr>
+<td><code>water</code></td>
+<td><a href="https://twitter.com/DitamAi_">DitamAi</a></td>
+<td>Create more consistent water</td>
+<td><code>water, stream of water, water balls</code></td>
+<td><a href="https://civitai.com/models/10750/watervfx-create-more-consistent-water-wip">Link</a></td>
+</tr>
+<tr>
+<td><code>watercolor</code></td>
+<td><a href="https://twitter.com/cinsdia?t=oJuy8Qw1BQ5uCXODAlQo5Q&amp;s=09">Cinsdia</a></td>
+<td>Watercolor style</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/104707/niji-watercolor">Link</a></td>
+</tr>
+<tr>
+<td><code>westerncartoon</code></td>
+<td><a href="https://twitter.com/quack_quack_22">quack_quack_22</a></td>
+<td>General-purpose western cartoon style</td>
+<td><code>cartoon fanart style</code></td>
+<td><a href="https://civitai.com/models/17800/cartoon-fanart-style">Link</a></td>
+</tr>
+<tr>
+<td><code>witchcraftpunk</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>WitchcraftPunk style</td>
+<td><code>WitchcraftPunkAI</code></td>
+<td><a href="https://civitai.com/models/78280/witchcraftpunkai">Link</a></td>
+</tr>
+<tr>
+<td><code>zombie</code></td>
+<td><a href="https://civitai.com/user/konyconi/models">konyconi</a></td>
+<td>Makes any character a zombie</td>
+<td><code>rotungwoka person</code></td>
+<td><a href="https://civitai.com/models/20630/rottingzombies-lora-extraction">Link</a></td>
+</tr>
+<tr>
+<td><code>hands</code></td>
+<td><a href="https://civitai.com/user/batchofcookies">batchofcookies</a></td>
+<td>Helper LoRA for inpainting hands</td>
+<td><code>realistic hands</code></td>
+<td><a href="https://civitai.com/models/156937/realistic-hands-lora-inpainting">Link</a></td>
+</tr>
+<tr>
+<td><code>animesketch</code></td>
+<td><a href="https://civitai.com/user/CitronLegacy">CitronLegacy</a></td>
+<td>Creates simple sketch style images (for SD1.5)</td>
+<td><code>(Pencil_Sketch:1.2, messy lines, greyscale, traditional media, sketch), unfinished, hatching (texture)</code></td>
+<td><a href="https://civitai.com/models/202764/anime-sketch-style-sdxl-and-sd15?modelVersionId=258108">Link</a></td>
+</tr>
+<tr>
+<td><code>fashiongirl</code></td>
+<td><a href="https://civitai.com/user/zakp">zakp</a></td>
+<td>Anime fashionable girls</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/8217?modelVersionId=128793">Link</a></td>
+</tr>
+<tr>
+<td><code>surrealharmony</code></td>
+<td><a href="https://civitai.com/user/Kappa_Neuro">Kappa_Neuro</a></td>
+<td>Creates juxtapositions of surrealistic elements in a harmonious way</td>
+<td><code>Surreal Harmony</code></td>
+<td><a href="https://civitai.com/models/36722/surreal-harmony?modelVersionId=154228">Link</a></td>
+</tr>
+<tr>
+<td><code>animedetailer</code></td>
+<td><a href="https://civitai.com/user/JujoHotaru">JujoHotaru</a></td>
+<td>Hyperdetailer for 2D anime images</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/196752/hyper-detailer?modelVersionId=229782">Link</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="loras-for-sdxl-models">Loras for SDXL models</h2>
+<p>The following LoRAs are available for our SDXL based models:</p>
+<table>
+<thead>
+<tr>
+<th>LoRA name</th>
+<th>Creator</th>
+<th>Description</th>
+<th>Activation words</th>
+<th>Available In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acrylicpainting</code></td>
+<td><a href="https://civitai.com/user/tornado73735">tornado73735</a></td>
+<td>Apply acrylic painting style to your generated images.</td>
+<td><code>stileza4,acrylic painting</code></td>
+<td><a href="https://civitai.com/models/385434/acrylicpainting?modelVersionId=430134">Link</a></td>
+</tr>
+<tr>
+<td><code>actionshot</code></td>
+<td><a href="https://civitai.com/user/\_Envy\_"><em>Envy</em></a></td>
+<td>Puts your characters in an action pose</td>
+<td><code>action shot</code></td>
+<td><a href="https://civitai.com/models/214442/envy-action-shot-xl-01?modelVersionId=241565">Link</a></td>
+</tr>
+<tr>
+<td><code>alphastyle</code></td>
+<td><a href="https://civitai.com/user/_Envy_"><em>Envy</em></a></td>
+<td>Alpha Style, for the prime touch; Creates very colorful, 2d illustrations. Try any 2D, cartoon, anime, illustration, manga related trigger words to get even more out of it.</td>
+<td><code>DonM4lph4XL</code></td>
+<td><a href="https://civitai.com/models/355934/donm-alpha-style-for-the-prime-touch-sdxl?modelVersionId=397931">Link</a></td>
+</tr>
+<tr>
+<td><code>ampereart</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>LoRA to draw illustrations connected with imitation electrical diagrams, and it performs this task correctly. This model has hidden potential and will generate various images with an interesting style.</td>
+<td><code>ampereart; electrical diagram</code></td>
+<td><a href="https://civitai.com/models/317144/ampereart?modelVersionId=355684">Link</a></td>
+</tr>
+<tr>
+<td><code>animesketch-sdxl</code></td>
+<td><a href="https://civitai.com/user/CitronLegacy">CitronLegacy</a></td>
+<td>Creates simple sketch style images (for SDXL)</td>
+<td><code>(Pencil_Sketch:1.2, messy lines, greyscale, traditional media, sketch), unfinished, hatching (texture)</code></td>
+<td><a href="https://civitai.com/models/202764/anime-sketch-style-sdxl-and-sd15?modelVersionId=258108">Link</a></td>
+</tr>
+<tr>
+<td><code>animewatercolor</code></td>
+<td><a href="https://civitai.com/user/_Envy_"><em>Envy</em></a></td>
+<td>A watercolor LoRA for anime generations. Can be used on anime models or combined with other anime LoRAs.</td>
+<td><code>watercolor</code></td>
+<td><a href="https://civitai.com/models/227918/envy-anime-watercolor-xl-01">Link</a></td>
+</tr>
+<tr>
+<td><code>books</code></td>
+<td><a href="https://civitai.com/user/mnemic">mnemic</a></td>
+<td>Texture LoRA, everything is made out of books! Try adding made of books, leather, paper or pages and others to motivate the style into your desired direction.</td>
+<td><code>DonMB00ksXL</code></td>
+<td><a href="https://civitai.com/models/250264/donm-books-world-morph-sd15sdxl?modelVersionId=282403">Link</a></td>
+</tr>
+<tr>
+<td><code>cake</code></td>
+<td><a href="https://civitai.com/user/DonMischo">DonMischo</a></td>
+<td>Turn anything into a cake shape. Example: CakeStyle shark.</td>
+<td><code>CakeStyle, custom cake, birthday cake, whipped cream on top</code></td>
+<td><a href="https://civitai.com/models/347704/cake-style-sdxl-custom-shaped-cakes?modelVersionId=389011">Link</a></td>
+</tr>
+<tr>
+<td><code>cardboard</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>It creates items, mostly in the form of wooden or cardboard models or toys, often in the style of wooden puzzle toys.</td>
+<td><code>woouzzle</code></td>
+<td><a href="https://civitai.com/models/391750/woouzzle?modelVersionId=437018">Link</a></td>
+</tr>
+<tr>
+<td><code>cinephile</code></td>
+<td><a href="https://civitai.com/user/VIPULGFX">VIPULGFX</a></td>
+<td>Abstract cinematography art style. Use movie names, and related terms for the better results.</td>
+<td><code>none</code></td>
+<td><a href="https://civitai.com/models/341613/cinephile?modelVersionId=382431">Link</a></td>
+</tr>
+<tr>
+<td><code>clockwork</code></td>
+<td><a href="https://civitai.com/user/DonMischo">DonMischo</a></td>
+<td>Lora to turn things into Clockwork/Steampunk material. Use with triggerword and use additional triggerwords to bring out the full potential. Some additional triggerwords to use and examples: Some examples: Cyber: hologram, holographic, anything with cyber; Scifi: use scifi, tech, futuristic, futurism, postapocalyptic; Darker: eerie, stygical, gloomy, decay, haunting; Fantasy/magical: use magical, whimsical, fairytale, fantasy; Organic: biomorphic, biomimetic, botanical, bio, organic;</td>
+<td><code>DonMSt34mPXL</code></td>
+<td><a href="https://civitai.com/models/335010/donm-clockworksteampunk-sd15sdxl?modelVersionId=375228">Link</a></td>
+</tr>
+<tr>
+<td><code>cyberpunkxl</code></td>
+<td><a href="https://civitai.com/user/joebowersphotography">joebowersphotography</a></td>
+<td>You know it, you love it. It's Cyberpunk. Sketch or photographic style.</td>
+<td><code>Cyberpunk</code></td>
+<td><a href="https://civitai.com/models/391440/cyberpunk-2077-art-style?modelVersionId=436693">Link</a></td>
+</tr>
+<tr>
+<td><code>dice</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>a model for you that creates objects from dice. I focused more on its artistic qualities and flexibility, pushing the realism of the dice representation into the background. So, the model creates cool images, but the number of points on the dice is often inaccurate.</td>
+<td><code>dice</code></td>
+<td><a href="https://civitai.com/models/367102/dicecraft?modelVersionId=410233">Link</a></td>
+</tr>
+<tr>
+<td><code>digitalpainting</code></td>
+<td><a href="https://civitai.com/user/_Envy_"><em>Envy</em></a></td>
+<td>A sharp digital painting style with muted colors.</td>
+<td><code>none</code></td>
+<td><a href="https://civitai.com/models/383996/envy-sharp-digital-painting-xl-01?modelVersionId=428572">Link</a></td>
+</tr>
+<tr>
+<td><code>dnd</code></td>
+<td><a href="https://civitai.com/user/Hevok">Hevok</a></td>
+<td>Dungeons and Dragons fantasy art style</td>
+<td><code>dungeons and dragons</code></td>
+<td><a href="https://civitai.com/models/134343/dungeons-and-dragons-art-style-capture-fantasy-lora-xl?modelVersionId=209171">Link</a></td>
+</tr>
+<tr>
+<td><code>drawix9</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>A strong stylized digital paintings lora. Lora is mainly designed for portraits, but it also handles wide frames and more complex scenes quite well. I like to suggest using the "ink" hint to give the drawing more contrast and sharpness, but it also generates cool images without it. Can be used for all kinds of drawing experiments.</td>
+<td><code>drawix9; dwx9</code></td>
+<td><a href="https://civitai.com/models/369645/drawix-no-9?modelVersionId=413004">Link</a></td>
+</tr>
+<tr>
+<td><code>dualpistolpov</code></td>
+<td><a href="https://civitai.com/user/HailoKnight">HailoKnight</a></td>
+<td>Generates images from dual piston POV. Example prompt: Cinematic shot of a knight holding pistols in each hand, fighting a big burning phoenix boss, jungle in background, dual pistol pov</td>
+<td><code>dual pistol pov</code></td>
+<td><a href="https://civitai.com/models/351592/xl-weapon-dual-pistol-pov-by-hailoknight?modelVersionId=393238">Link</a></td>
+</tr>
+<tr>
+<td><code>eyestune</code></td>
+<td><a href="https://civitai.com/user/WTFusion">WTFusion</a></td>
+<td>It reduces/completely solves the problem of deformed eyes.</td>
+<td><code>none</code></td>
+<td><a href="https://civitai.com/models/383936/eyestune?modelVersionId=428512">Link</a></td>
+</tr>
+<tr>
+<td><code>fantasymap</code></td>
+<td><a href="https://civitai.com/user/basileus">basileus</a></td>
+<td>Creates maps in the handdrawn(ish) 2.5D style popular in fantasy roleplaying games. Trends toward faded/sepia unless you lower the strength. Three versions: Light: Imparts the aesthetic, but doesn't push toward any particular visual element. Medium: Strong, tends toward the classic "Tolkien-esque" aesthetic. Heavy: Very strong, creates dramatic, detailed maps with decorative visual elements. txt2img can be used for fun or inspiration, but img2img can be used to flesh out crudely sketched maps</td>
+<td><code>fantasy map</code></td>
+<td><a href="https://civitai.com/models/382959/fantasy-map?modelVersionId=427437">Link</a></td>
+</tr>
+<tr>
+<td><code>fashiongirl-sdxl</code></td>
+<td><a href="https://civitai.com/user/zakp">zakp</a></td>
+<td>Anime fashionable girls (SDXL version)</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/8217?modelVersionId=128793">Link</a></td>
+</tr>
+<tr>
+<td><code>framex</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>the model was supposed to create frames with a repeated image inside them. It's quite unpredictable (often creating illustrations of men or women holding the frame, sometimes completely ignoring the prompt). So, the flexibility of the model is quite specific; sometimes it does something completely different than what we wanted. We have some influence on this by changing its weight (I tested from 0.6 to 1.4) and selecting different base models.</td>
+<td><code>framex</code></td>
+<td><a href="https://civitai.com/models/350138/framex?modelVersionId=391651">Link</a></td>
+</tr>
+<tr>
+<td><code>frostedglass</code></td>
+<td><a href="https://civitai.com/user/RojerDodger">RojerDodger</a></td>
+<td>Frosted glass effect to emulate the look of a wet or sand blasted glass window.</td>
+<td><code>frosted glass</code></td>
+<td><a href="https://civitai.com/models/363683/frosted-glass-xl?modelVersionId=406383">Link</a></td>
+</tr>
+<tr>
+<td><code>ghiblistyle</code></td>
+<td><a href="https://civitai.com/user/CongDC">CongDC</a></td>
+<td>generate images in Ghibli Studio Style.</td>
+<td><code>none</code></td>
+<td><a href="https://civitai.com/models/359367/ghibli-style-xl?modelVersionId=401654">Link</a></td>
+</tr>
+<tr>
+<td><code>golfballs</code></td>
+<td><a href="https://civitai.com/user/frutiemax">frutiemax</a></td>
+<td>This model attempts to transform anything in golf balls.</td>
+<td><code>made of golf balls; g0lfb4lls</code></td>
+<td><a href="https://civitai.com/models/329692/its-golf-time?modelVersionId=369648">Link</a></td>
+</tr>
+<tr>
+<td><code>grimace</code></td>
+<td><a href="https://civitai.com/user/thegipper">thegipper</a></td>
+<td>Generates images of subjects with Grimacing face Expression</td>
+<td><code>grimacing expression</code></td>
+<td><a href="https://civitai.com/models/384402/grimacing-expression-xl-clenched-teeth?modelVersionId=429014">Link</a></td>
+</tr>
+<tr>
+<td><code>handsbehindback</code></td>
+<td><a href="https://civitai.com/user/Torog">Torog</a></td>
+<td>LORA to help get a "hands behind back" pose more consistently, without changing the camera angle to behind the subject or paradoxically having the hands end up in front. Use "HBB" as the keyword, instead of "Hands Behind Back" to activate it.</td>
+<td><code>HBB; handcuffed</code></td>
+<td><a href="https://civitai.com/models/257931/hands-behind-back?modelVersionId=421840">Link</a></td>
+</tr>
+<tr>
+<td><code>headpov</code></td>
+<td><a href="https://civitai.com/user/diogod">diogod</a></td>
+<td>Generates images with Point of view from the back of the head or camera over the shoulders or Animal Perspective.</td>
+<td><code>shot in the point of view from the back of a</code></td>
+<td><a href="https://civitai.com/models/329630/head-pov-point-of-view-from-the-back-of-the-head-camera-over-the-shoulders-animal-perspective?modelVersionId=369366">Link</a></td>
+</tr>
+<tr>
+<td><code>hologram</code></td>
+<td><a href="https://civitai.com/user/DonMischo">DonMischo</a></td>
+<td>"Generates images as if they were Holographic display. Use with triggerword and use additional triggerwords to bring out the full potential. Try on a holo display and others to get even more out of it.  Some examples: Cyber: hologram, holographic, anything with cyber; Scifi:  use scifi, tech, futuristic, futurism, postapocalyptic; Darker: eerie, stygical, gloomy, decay, haunting; Fantasy/magical: use magical, whimsical, fairytale, fantasy; Organic: biomorphic, Biomimetic, botanical, bio, organic;</td>
+<td><code>DonMH010D15pl4yXL</code></td>
+<td><a href="https://civitai.com/models/253502/donm-holo-display-sd15sdxl?modelVersionId=285751">Link</a></td>
+</tr>
+<tr>
+<td><code>holoportrait</code></td>
+<td><a href="https://civitai.com/user/Elarosse">Elarosse</a></td>
+<td>Generates or transforms a face into a futuristicm holographic one!</td>
+<td><code>hlpr; futuristic</code></td>
+<td><a href="https://civitai.com/models/367577/futuristic-portraits-holographic-hologram-futuristic-ui?modelVersionId=410776">Link</a></td>
+</tr>
+<tr>
+<td><code>honey</code></td>
+<td><a href="https://civitai.com/user/b0008">b0008</a></td>
+<td>Cover something with honey! works best to cover people with honey, but with a bit try and error it can cover other things in honey.</td>
+<td><code>covered in honey</code></td>
+<td><a href="https://civitai.com/models/131130/honeyxl-cover-anything-with-honey?modelVersionId=414303">Link</a></td>
+</tr>
+<tr>
+<td><code>interiordesign-industrial</code></td>
+<td><a href="https://civitai.com/user/AntiBone">AntiBone</a></td>
+<td>It's a cool interior design style with exposed concrete walls and floors, iron and wood furniture combined,It's a cool interior design style with exposed concrete walls and floors, iron and wood furniture combined.</td>
+<td><code>tfz_industrial</code></td>
+<td><a href="https://civitai.com/models/359295/industrial-style-interior-design?modelVersionId=401587">Link</a></td>
+</tr>
+<tr>
+<td><code>interiordesign-luxurymodern</code></td>
+<td><a href="https://civitai.com/user/AntiBone">AntiBone</a></td>
+<td>This is for interior design, Modern luxury style, It could understand most of the prompt, so it can generate different room of a house, such as living room, kitchen, bedroom and so on.</td>
+<td><code>tfz_poliform</code></td>
+<td><a href="https://civitai.com/models/357681/modern-luxury-interior?modelVersionId=399815">Link</a></td>
+</tr>
+<tr>
+<td><code>interiordesign-midcenturymodern</code></td>
+<td><a href="https://civitai.com/user/AntiBone">AntiBone</a></td>
+<td>This is interior design style of Mid-century Modern, A little retro, and a little modern, with strong malleability, suitable for a variety of Spaces, prompt "tfz_minotti" trigger will be better</td>
+<td><code>tfz_minotti</code></td>
+<td><a href="https://civitai.com/models/357840/mid-century-modern-style?modelVersionId=399982">Link</a></td>
+</tr>
+<tr>
+<td><code>interiordesign-minimalist</code></td>
+<td><a href="https://civitai.com/user/AntiBone">AntiBone</a></td>
+<td>Minimalist interior design style, simple lines, modern and elegant, with strong spatial malleability, can form different space design through simple prompt words. Such as kitchen, living room, bedroom, dining room, kitchen, cloakroom and so on</td>
+<td><code>tfz_minimalist_style</code></td>
+<td><a href="https://civitai.com/models/359448/minimalist-style-interior-design?modelVersionId=401743">Link</a></td>
+</tr>
+<tr>
+<td><code>interiordesign-wooden</code></td>
+<td><a href="https://civitai.com/user/AntiBone">AntiBone</a></td>
+<td>interior design style with wooden furniture,</td>
+<td><code>tfz_log_style</code></td>
+<td><a href="https://civitai.com/models/359395/log-style-interior-design?modelVersionId=401681">Link</a></td>
+</tr>
+<tr>
+<td><code>leonidafremov</code></td>
+<td><a href="https://civitai.com/user/Askel72">Askel72</a></td>
+<td>This is a tribute to Leonid Afremov, applies his style to the generated images. Leonid Afremov was a prolific and distinctive artist known for his vibrant and captivating oil paintings.</td>
+<td><code>by leonid afremov; leonid afremov style</code></td>
+<td><a href="https://civitai.com/models/351762/bixl-lora-leonid-afremov-style?modelVersionId=393420">Link</a></td>
+</tr>
+<tr>
+<td><code>linquivera</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>Applies image effect composed of lines or intertwined with lines. Generates very stylized images. With more elaborate prompts, it sometimes requires increasing the weight of Lora.</td>
+<td><code>linquivera; liiv1</code></td>
+<td><a href="https://civitai.com/models/249837/linquivera">Link</a></td>
+</tr>
+<tr>
+<td><code>logo</code></td>
+<td><a href="https://civitai.com/user/artificialguybr">artificialguybr</a></td>
+<td>Generate logos in a wide variety of themes</td>
+<td><code>logoredmaf, logo</code></td>
+<td><a href="https://civitai.com/models/124609/logoredmond-logo-lora-for-sd-xl-10?modelVersionId=177492">Link</a></td>
+</tr>
+<tr>
+<td><code>moreart</code></td>
+<td><a href="https://civitai.com/user/ledadu">ledadu</a></td>
+<td>Detailed, creative, expressive images</td>
+<td><code>None</code></td>
+<td><a href="https://civitai.com/models/124347/xlmoreart-full-xlreal-enhancer?modelVersionId=152309">Link</a></td>
+</tr>
+<tr>
+<td><code>nurlens</code></td>
+<td><a href="https://civitai.com/user/stawil">stawil</a></td>
+<td>Realistic photography LoRA for SDXL models</td>
+<td><code>NurLens, photography</code></td>
+<td><a href="https://civitai.com/models/126442/nurlens-photography-master-sdxl-10">Link</a></td>
+</tr>
+<tr>
+<td><code>photography</code></td>
+<td><a href="https://civitai.com/user/AI\_Characters">AI_Characters</a></td>
+<td>More coherent and photorealistic images</td>
+<td><code>photo in phst artstyle</code></td>
+<td><a href="https://civitai.com/models/198378/essenz-better-photography-style-lora-for-sdxl-10?modelVersionId=250573">Link</a></td>
+</tr>
+<tr>
+<td><code>pouting</code></td>
+<td><a href="https://civitai.com/user/OcularPatdown">OcularPatdown</a></td>
+<td>This model should allow you to create characters and people with puckered lips. Currently only trained on realistic women, but with some weight tweaks and appropriate prompts it can be applied to other styles and characters. Adding a phrase like "sticking out tongue" in the negative prompts can help fix some weird issues around the mouth.</td>
+<td><code>pouting</code></td>
+<td><a href="https://civitai.com/models/338370/puckered-lips-helper-sdxl?modelVersionId=378862">Link</a></td>
+</tr>
+<tr>
+<td><code>princess</code></td>
+<td><a href="https://civitai.com/user/titansteng">titansteng</a></td>
+<td>Create Disney princesses in Pixar style</td>
+<td><code>none, use Disney Princess Names like Snow White</code></td>
+<td><a href="https://civitai.com/models/212532/all-disney-princess-xl-lora-model-from-ralph-breaks-the-internet?modelVersionId=244808">Link</a></td>
+</tr>
+<tr>
+<td><code>prisoncell</code></td>
+<td><a href="https://civitai.com/user/altjb1616">altjb1616</a></td>
+<td>Generates background for prison cells and cellblocks</td>
+<td><code>prison cell</code></td>
+<td><a href="https://civitai.com/models/347309/modern-prison-cell?modelVersionId=388573">Link</a></td>
+</tr>
+<tr>
+<td><code>retrofuturism</code></td>
+<td><a href="https://civitai.com/user/duskfallcrew">duskfallcrew</a></td>
+<td>Apply Retro Futurism style to your images.</td>
+<td><code>none</code></td>
+<td><a href="https://civitai.com/models/387708/retro-futurism-sdxl?modelVersionId=432660">Link</a></td>
+</tr>
+<tr>
+<td><code>scifimovie</code></td>
+<td><a href="https://civitai.com/user/MakeThemComeAliveAIArt">MakeThemComeAliveAIArt</a></td>
+<td>Immerse yourself in the universe with my Science Fiction Cinematic Style Lora, engineered to craft images that embody the essence of sci-fi. Drawing inspiration from The Expanse, Pandorum, and Skylines 3, this lora is your portal to creating breathtaking science fiction visuals. Optional Triggers: Futuristic rifle, Futuristic handgun, Futuristic assault rifle, pilot, cockpit, inside a spaceship, helmet, futuristic tactical clothes.</td>
+<td><code>Science Fiction Cinematic Style</code></td>
+<td><a href="https://civitai.com/models/332862/science-fiction-cinematic-style?modelVersionId=372879">Link</a></td>
+</tr>
+<tr>
+<td><code>scifixl</code></td>
+<td><a href="https://civitai.com/user/Ziov">Ziov</a></td>
+<td>LoRA for making Scifi Machines, Scifi Woman, and Mechs. Has tendency to be on the darker color spectrum.</td>
+<td><code>scifi</code></td>
+<td><a href="https://civitai.com/models/356470/scifi-machines-woman-mech?modelVersionId=398502">Link</a></td>
+</tr>
+<tr>
+<td><code>shadow</code></td>
+<td><a href="https://civitai.com/user/DonMischo">DonMischo</a></td>
+<td>Images are created as if they were just shadows cast on the wall. Use the triggerword and other shadow on a wall related trigger words to get even more out of it.</td>
+<td><code>DonM5h4d0w5XL</code></td>
+<td><a href="https://civitai.com/models/337136/donm-shadow-on-a-wall-sdxl?modelVersionId=377511">Link</a></td>
+</tr>
+<tr>
+<td><code>shallowxl</code></td>
+<td><a href="https://civitai.com/user/ccfantasy86">ccfantasy86</a></td>
+<td>this LoRA will truly generate a shallow depth of field effect.</td>
+<td><code>shallow_dof</code></td>
+<td><a href="https://civitai.com/models/390168/shallow-depth-of-field?modelVersionId=435329">Link</a></td>
+</tr>
+<tr>
+<td><code>simplex</code></td>
+<td><a href="https://civitai.com/user/grafmix421">grafmix421</a></td>
+<td>The model creates very simple drawings with a single line or sometimes drawn with just one stroke of the line. The model is quite temperamental, and it takes a moment to get acquainted with it. Experimenting with the weight is necessary (I tried: 0.5 – more details, 1 – very simplified drawings, sometimes unreadable, especially with short prompts). Base models also have a significant impact on the effect. Helpful prompts include "simple, line, one line, simplex, and similar ones indicating the drawing style direction."</td>
+<td><code>simple lines; simplex</code></td>
+<td><a href="https://civitai.com/models/300268/simplex?modelVersionId=337229">Link</a></td>
+</tr>
+<tr>
+<td><code>skinrealism</code></td>
+<td><a href="https://civitai.com/user/MakeThemComeAliveAIArt">MakeThemComeAliveAIArt</a></td>
+<td>Lora specializes in crafting detailed, natural-looking skin textures and imperfections, One of Lora's standout features is its ability to generate skin textures that mimic the intricacies of real skin, complete with subtle blemishes and imperfections. Gone are the days of artificial, airbrushed perfection. With Lora, users can explore the beauty of imperfection, embracing the authenticity of natural skin without makeup and the occasional acne mark</td>
+<td><code>Detailed natural skin and blemishes without-makeup and acne</code></td>
+<td><a href="https://civitai.com/models/248951/skin-realism-acne-skin-details-imperfections-sdxl?modelVersionId=340833">Link</a></td>
+</tr>
+<tr>
+<td><code>skimask</code></td>
+<td><a href="https://civitai.com/user/buzzkillington">buzzkillington</a></td>
+<td>This is a ski mask lora for SDLX. It's not too bad when using weight from 0.6-1. Some of the masks will have occasional logos or artifacts</td>
+<td><code>ski mask</code></td>
+<td><a href="https://civitai.com/models/361484/ski-mask?modelVersionId=403959">Link</a></td>
+</tr>
+<tr>
+<td><code>skyscraper</code></td>
+<td><a href="https://civitai.com/user/JZCG">JZCG</a></td>
+<td>Generates images of skyscrapers, and super high-rise building in the city. A naturally described prompt can achieve better results</td>
+<td><code>jzcgxl001; building; outdoors</code></td>
+<td><a href="https://civitai.com/models/363635/jzcgxl015-super-high-rise-building?modelVersionId=406326">Link</a></td>
+</tr>
+<tr>
+<td><code>southpark</code></td>
+<td><a href="https://civitai.com/user/alexionby">alexionby</a></td>
+<td>With this LoRA model, we can transform anything into the iconic South Park style. Imagine inserting popular characters and personalities right into the bustling streets of South Park city. The foreground detail is usually spot-on, though the backgrounds could use some enhancement.</td>
+<td><code>south_park_lora</code></td>
+<td><a href="https://civitai.com/models/335563/south-park-sdxl?modelVersionId=375826">Link</a></td>
+</tr>
+<tr>
+<td><code>spaceroom</code></td>
+<td><a href="https://civitai.com/user/Anchemix">Anchemix</a></td>
+<td>Creates interior rooms in space, very futuristic and minimalistic style.</td>
+<td><code>anchespaceroom</code></td>
+<td><a href="https://civitai.com/models/320922/anchemix-space-room?modelVersionId=359856">Link</a></td>
+</tr>
+<tr>
+<td><code>split</code></td>
+<td><a href="https://civitai.com/user/WTFusion">WTFusion</a></td>
+<td>Splits head/body and shows something inside it</td>
+<td><code>split head, split head and body, inside</code></td>
+<td><a href="https://civitai.com/models/206883?modelVersionId=234056">Link</a></td>
+</tr>
+<tr>
+<td><code>superpowers</code></td>
+<td><a href="https://civitai.com/user/MakeThemComeAliveAIArt">MakeThemComeAliveAIArt</a></td>
+<td>LoRA to generate beings imbued with powers beyond the ordinary. Example prompt: jaw-dropping photo of a dramatic entrance of an evil giant cucumber casting fire magic, lens flare, particles, god rays</td>
+<td><code>none</code></td>
+<td><a href="https://civitai.com/models/345946/superpowers-xl?modelVersionId=387166">Link</a></td>
+</tr>
+<tr>
+<td><code>surrealharmony-sdxl</code></td>
+<td><a href="https://civitai.com/user/Kappa\_Neuro">Kappa_Neuro</a></td>
+<td>Creates juxtapositions of surrealistic elements in a harmonious way (SDXL version)</td>
+<td><code>Surreal Harmony</code></td>
+<td><a href="https://civitai.com/models/36722/surreal-harmony?modelVersionId=154228">Link</a></td>
+</tr>
+<tr>
+<td><code>sweaty</code></td>
+<td><a href="https://civitai.com/user/MakeThemComeAliveAIArt">MakeThemComeAliveAIArt</a></td>
+<td>You can just add the lora now trigger word required it will automatically add a little shine and sparkle to the subjects skin. But if you do want it to create more effect use the following words, you can use one, you can use mutiple it's up to you. Sweaty;  Sweaty hair; extreme sweat shine; dripping with sweat;  body shiny with sweat glow; sweat droplets. Weight: Between 1.2 and 5.0</td>
+<td><code>sweaty</code></td>
+<td><a href="https://civitai.com/models/242004/sweaty-sdxl?modelVersionId=302404">Link</a></td>
+</tr>
+<tr>
+<td><code>texta</code></td>
+<td><a href="https://civitai.com/user/humblemikey">humblemikey</a></td>
+<td>Improve text generation</td>
+<td><code>logo, text, sign that says, the word</code></td>
+<td><a href="https://civitai.com/models/221240/texta-generate-text-with-sdxl?modelVersionId=249521">Link</a></td>
+</tr>
+<tr>
+<td><code>textures</code></td>
+<td><a href="https://civitai.com/user/humblemikey">humblemikey</a></td>
+<td>"Over 100 Textures! I recommend keeping the weight under 0.5 for most textures, otherwise you might end up with a simple cube, blob, sphere, etc. rather than the character/object you wanted. Start with 0.4 and then increase or decrease the strength to get a good result. Prompt Guide: Try 'texture object' e.g. 'chainmail sonic the hedgehog' or 'object made of texture', e.g. 'sonic the hedgehog made of chainmail' Textures Pack is a LoRA I trained on many different textured objects, intending to merge into my main PixelWave base model. But it was too strong and I couldn't use it. So I'm sharing it with you. 😊 The success of each individual texture varies of course due to how familiar SDXL is already with the subject, and also some textures had more training images than others."</td>
+<td><code>"Plant-Based: Bamboo, Mossy, Moss-covered stone, Leaf veins, Dry bark, Tangled vines, Blooming flower petals, Straw mat, Seaweed, Cactus spikes, Dew-covered grass, Sprouting fungi Fruits: Avocado skin, Lemon skin, Lime skin, Cherry skin, Strawberry skin, Red apple skin, Green apple skin, Dragonfruit skin, Watermelon, Mottled Banana peel, Pulpy orange Foods: Gooey Marshmallow, Cotton candy, Popcorn, Freshly baked bread crust, Melted chocolate, Cinnamon stick, Grilled meat surface, Coffee bean, Coffee foam, Carrot skin, Corn, Waffle, Swiss cheese Earthen &amp; Rock: Clay dirt, Lava flow, Cooling lava, Crystal formations, Parched soil, Cavern wall, Pebbles, Red gravel, Rocky surface, Sandstone, Wet sand, Dried mud cracks, Smooth river pebbles, Pumice stone, Rippled sand dunes Wood &amp; Bark: Wood, Polished wood, Wooden screen, Charred wood, Damp wood, Wood plank, Charcoal Elemental: Fire, Ice, Water, Clouds, Dense fog, Smoke, Snow, Cracked ice, Slick Ice, Smoldering embers Animal Based: Zebra fur, Leopard fur, Tiger fur, Crocodile skin, Snakeskin, Fish scales, Matted fur, Bird feathers, Honeycomb, Seashell, Jellyfish tentacles, Spider web, Salmon flesh, Spiky sea urchin Miscellaneous: Fleshy, Bone 🔨 Man-Made Textures Building &amp; Construction: Cement block, Smooth marble, Corrugated metal, Flagstone, Herringbone brick, Cobblestone, Sidewalk pavement, Asphalt, Stone wall, Long stone tiles, Frosted glass, Freshly poured concrete, Parquetry Metals &amp; Reflective: Aluminum foil, Gold leaf, Tinfoil, Chainmail, Gold chainmail, Rusty metal, Ferrofluid, Iridescent oil slick, Brushed steel, Metallic grid, Galvanized metal, Mirrored surface, Worn copper, Damascus steel, Polished brass Fabrics &amp; Materials: Acoustic Panels, Rustic leather, Velvet fabric, Corduroy material, Shaggy carpet, Suede material, Crushed velvet, Knitted yarn, Lacy fabric, Patterned tapestry, Quilted fabric, Burlap sack, Worn-out denim, Silk sheets, Fuzzy fleece, Beaded curtain, Sequined cloth, Buttons, Woven basket, Black woven bamboo Paper: Paper, Cardboard, Torn Cardboard, Crumpled paper, Brittle parchment Miscellaneous: Rope, Clear plastic, Bubble wrap, Styrofoam, Plastic tarp, Bubbles, Soap bubble, Soap foam, Shaving cream, Nuts and bolts, Chipping paint, Broken glass shards, Toxic chemical 🎨 Artistic &amp; Abstract Textures Swirling galaxy, Glossy magazine cover, Chalkboard, Dripping candle wax, Melting wax, Oozing slime, Snowflakes, Rain on window, Cassette tape, Fingerprint smudges, Ink in water, Spilled paint"</code></td>
+<td><a href="https://civitai.com/models/298417/textures-pack-over-100-textures?modelVersionId=335188">Link</a></td>
+</tr>
+<tr>
+<td><code>thermalvision</code></td>
+<td><a href="https://civitai.com/user/abesmon">abesmon</a></td>
+<td>LoRA to immitate thermal vision camera. It's not very consistant, so you need to play with weight. Simple 1-2 words prompts are good eve with 0.5 weight, but as the prompts grow, you need to increase weight of LoRA higher up to 1.5. Model is not very consistent and tends to make regular images on the things, that it hasnt seen.</td>
+<td><code>thermalvision</code></td>
+<td><a href="https://civitai.com/models/369299/thermal-vision?modelVersionId=412625">Link</a></td>
+</tr>
+<tr>
+<td><code>treasureplanet</code></td>
+<td><a href="https://civitai.com/user/scarletsword45">scarletsword45</a></td>
+<td>A lora intended to produce images in the style of Disney's Treasure Planet. Capable of generating 2d and 3d animation scenes.</td>
+<td><code>TPstyle</code></td>
+<td><a href="https://civitai.com/models/374099/treasure-planet-style?modelVersionId=417825">Link</a></td>
+</tr>
+<tr>
+<td><code>ukiyo-e</code></td>
+<td><a href="https://tensor.art/u/641644590759409638">Freek22</a></td>
+<td>"produce Ukiyo-e pictures in the original style of the edo period. it can produce Ink or colored Ukiyo-e. Additional triggerwords to try: ink (for black and white), colorful, samurai, shogun, katana, tanto, amaterasu, scene, B&amp;W"</td>
+<td><code>Ukiyo-e</code></td>
+<td><a href="https://tensor.art/models/678071166172197465">Link</a></td>
+</tr>
+<tr>
+<td><code>vintagephoto</code></td>
+<td><a href="https://civitai.com/user/wobushannes325">wobushannes325</a></td>
+<td>Photographic lora that applies vintage look to the generated images, authentic black and white works.</td>
+<td><code>lith_agfa_brovira_BEH1W</code></td>
+<td><a href="https://civitai.com/models/356217/lithagfabrovirabeh1w?modelVersionId=405116">Link</a></td>
+</tr>
+<tr>
+<td><code>voxel</code></td>
+<td><a href="https://civitai.com/user/fictiverse">fictiverse</a></td>
+<td>Generates voxel style art</td>
+<td><code>voxel style</code></td>
+<td><a href="https://civitai.com/models/118536/voxel-xl?modelVersionId=128609">Link</a></td>
+</tr>
+<tr>
+<td><code>woodenboard</code></td>
+<td><a href="https://civitai.com/user/ACLander">ACLander</a></td>
+<td>LoRA that mimics images created on an old wooden board. stylized, dull colors</td>
+<td><code>PlngPntBrd style; PlngPntBrd</code></td>
+<td><a href="https://civitai.com/models/387227/peeling-painted-board-style?modelVersionId=432120">Link</a></td>
+</tr>
+<tr>
+<td><code>wowifier</code></td>
+<td><a href="https://civitai.com/user/mooncryptowow">mooncryptowow</a></td>
+<td>Trained on a variety of AI art made by mooncryptowow</td>
+<td><code>art by mooncryptowow</code></td>
+<td><a href="https://civitai.com/models/117041/wowifierxl?modelVersionId=217866">Link</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://YourSubstackName.substack.com/" target="_blank" rel="noopener" title="YourSubstackName.substack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M168 80c-13.3 0-24 10.7-24 24v304c0 8.4-1.4 16.5-4.1 24H440c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H168zM72 480c-39.8 0-72-32.2-72-72V112c0-13.3 10.7-24 24-24s24 10.7 24 24v296c0 13.3 10.7 24 24 24s24-10.7 24-24V104c0-39.8 32.2-72 72-72h272c39.8 0 72 32.2 72 72v304c0 39.8-32.2 72-72 72H72zm104-344c0-13.3 10.7-24 24-24h96c13.3 0 24 10.7 24 24v80c0 13.3-10.7 24-24 24h-96c-13.3 0-24-10.7-24-24v-80zm200-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24s10.7-24 24-24zm-176 80h208c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80h208c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/Followfox_ai" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/distillery.dev/" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      
+    
+  </body>
+</html>
