@@ -1,0 +1,6 @@
+document cutoff weights properly
+document individual adaptweights in details
+document adaptface
+document --imagedenoise under img2mg
+document user-stats
+document everything lora training
